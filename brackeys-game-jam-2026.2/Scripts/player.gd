@@ -3,14 +3,11 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
-@export var lifes = 5
-
 
 @onready var animated_sprite: AnimatedSprite2D = $"AnimatedSprite2D"
 @onready var attack_stream_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var damage_component: Area2D = $Damage_component
 @onready var health_compontent: Node2D = $Health_Compontent
-
 
 
 var damage_component_offset: Vector2
