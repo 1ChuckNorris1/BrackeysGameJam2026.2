@@ -19,27 +19,27 @@ texture = ExtResource("2_r5l72")
 
 [node name="Npc" parent="." unique_id=348945450 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("2_50ct6")]
 position = Vector2(10, 24)
-waypoint_container = NodePath("../Waypoints2")
+waypoint_container = NodePath("../Waypoints")
 
-[node name="Waypoints2" type="Node2D" parent="." unique_id=4299661]
+[node name="Waypoints" type="Node2D" parent="." unique_id=4299661]
 
-[node name="Waypoint1" type="Node2D" parent="Waypoints2" unique_id=42773548]
+[node name="Waypoint1" type="Node2D" parent="Waypoints" unique_id=42773548]
 position = Vector2(95, 92)
 
-[node name="Waypoint2" type="Node2D" parent="Waypoints2" unique_id=325178176]
+[node name="Waypoint2" type="Node2D" parent="Waypoints" unique_id=325178176]
 position = Vector2(-31, 97)
 
-[node name="Waypoint3" type="Node2D" parent="Waypoints2" unique_id=821263726]
+[node name="Waypoint3" type="Node2D" parent="Waypoints" unique_id=821263726]
 position = Vector2(-156, 41)
 
-[node name="Waypoint4" type="Node2D" parent="Waypoints2" unique_id=1601020607]
+[node name="Waypoint4" type="Node2D" parent="Waypoints" unique_id=1601020607]
 position = Vector2(-134, -101)
 
-[node name="Waypoint5" type="Node2D" parent="Waypoints2" unique_id=267310642]
+[node name="Waypoint5" type="Node2D" parent="Waypoints" unique_id=267310642]
 position = Vector2(31, -126)
 
-[node name="Waypoint6" type="Node2D" parent="Waypoints2" unique_id=304873387]
+[node name="Waypoint6" type="Node2D" parent="Waypoints" unique_id=304873387]
 position = Vector2(136, -64)
 
-[node name="Waypoint7" type="Node2D" parent="Waypoints2" unique_id=1030739316]
+[node name="Waypoint7" type="Node2D" parent="Waypoints" unique_id=1030739316]
 position = Vector2(250, -49)
