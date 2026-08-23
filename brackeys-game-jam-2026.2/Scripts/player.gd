@@ -89,7 +89,7 @@ func play_animation(prefix: String, dir: Vector2):
 
 func attack():
 	is_attacking = true
-	damage_component.get_child(0).disabled = false
+	damage_component.atack()
 	attack_stream_player.play()
 	play_animation("attack", last_direction)
 
