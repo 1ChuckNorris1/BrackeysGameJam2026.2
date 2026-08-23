@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d3lgqv6al8fof"]
+
+[ext_resource type="Script" uid="uid://bsxd1up60cj35" path="res://Scripts/damage_component.gd" id="1_xl7g5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83tgy"]
+
+[node name="Damage_component" type="Area2D" unique_id=430981454]
+script = ExtResource("1_xl7g5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1018896342]
+shape = SubResource("RectangleShape2D_83tgy")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
