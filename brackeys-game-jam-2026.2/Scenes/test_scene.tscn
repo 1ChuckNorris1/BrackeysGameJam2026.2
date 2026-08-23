@@ -1,13 +1,9 @@
 [gd_scene format=3 uid="uid://cdiqcn0t6fcgf"]
 
-[ext_resource type="PackedScene" uid="uid://d1yaaq5gi4l0q" path="res://Scenes/Player.tscn" id="1_3dogw"]
+[ext_resource type="PackedScene" uid="uid://wuccshbuerod" path="res://Scenes/NPC.tscn" id="2_50ct6"]
 [ext_resource type="Texture2D" uid="uid://c3qqhcbsar2j8" path="res://Sprites/icon.svg" id="2_r5l72"]
 
 [node name="TestScene" type="Node2D" unique_id=1397237555]
-
-[node name="Player" parent="." unique_id=1244140961 instance=ExtResource("1_3dogw")]
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1355376418]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=680718213]
 position = Vector2(39, 297)
@@ -20,3 +16,30 @@ texture = ExtResource("2_r5l72")
 [node name="Icon3" type="Sprite2D" parent="." unique_id=1857763070]
 position = Vector2(-397, -279)
 texture = ExtResource("2_r5l72")
+
+[node name="Npc" parent="." unique_id=348945450 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("2_50ct6")]
+position = Vector2(10, 24)
+waypoint_container = NodePath("../Waypoints2")
+
+[node name="Waypoints2" type="Node2D" parent="." unique_id=4299661]
+
+[node name="Waypoint1" type="Node2D" parent="Waypoints2" unique_id=42773548]
+position = Vector2(95, 92)
+
+[node name="Waypoint2" type="Node2D" parent="Waypoints2" unique_id=325178176]
+position = Vector2(-31, 97)
+
+[node name="Waypoint3" type="Node2D" parent="Waypoints2" unique_id=821263726]
+position = Vector2(-156, 41)
+
+[node name="Waypoint4" type="Node2D" parent="Waypoints2" unique_id=1601020607]
+position = Vector2(-134, -101)
+
+[node name="Waypoint5" type="Node2D" parent="Waypoints2" unique_id=267310642]
+position = Vector2(31, -126)
+
+[node name="Waypoint6" type="Node2D" parent="Waypoints2" unique_id=304873387]
+position = Vector2(136, -64)
+
+[node name="Waypoint7" type="Node2D" parent="Waypoints2" unique_id=1030739316]
+position = Vector2(250, -49)
