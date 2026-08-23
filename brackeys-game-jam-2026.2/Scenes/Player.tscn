@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ct6278s1fw2j" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://Sprites/Player/Player.png" id="1_xhfnw"]
-[ext_resource type="PackedScene" uid="uid://dcu6pl1hpiajh" path="res://Scenes/health_compontent.tscn" id="3_dewec"]
 [ext_resource type="PackedScene" uid="uid://d3lgqv6al8fof" path="res://Scenes/damage_component.tscn" id="4_5ixxa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
@@ -447,9 +446,6 @@ disabled = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=273659715]
 pitch_scale = 3.0
-
-[node name="Health_Compontent" parent="." unique_id=226580124 instance=ExtResource("3_dewec")]
-max_lifes = 5
 
 [node name="Damage_component" parent="." unique_id=430981454 instance=ExtResource("4_5ixxa")]
 position = Vector2(36, 10)
