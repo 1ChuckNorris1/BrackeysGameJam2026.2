@@ -28,6 +28,7 @@ enemy=""
 [gui]
 
 theme/custom="uid://cftogl3xwae48"
+theme/custom_font="uid://gvvq3rc0jxlk"
 
 [input]
 
@@ -71,3 +72,5 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/decals/filter=0
+textures/light_projectors/filter=0
