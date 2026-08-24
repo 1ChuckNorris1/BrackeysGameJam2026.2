@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bd2d512dvfjvb"]
+
+[ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="1_kw180"]
+[ext_resource type="Script" uid="uid://bbqvddua6haw4" path="res://Scripts/npc_agent.gd" id="1_s3psu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
+radius = 12.0
+height = 38.0
+
+[node name="NPC_Agent" type="CharacterBody2D" unique_id=1024896108]
+script = ExtResource("1_s3psu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
+avoidance_enabled = true
+debug_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=291444864]
+scale = Vector2(2.955, 2.955)
+texture = ExtResource("1_kw180")
+region_enabled = true
+region_rect = Rect2(1, 168, 14, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
+position = Vector2(0, 24)
+rotation = -1.5416431
+shape = SubResource("CapsuleShape2D_ulfyr")
