@@ -1,9 +1,6 @@
 extends Agent
 
 
-
-
-
 func take_damage():
 	print("Game Over")
 	queue_free()
