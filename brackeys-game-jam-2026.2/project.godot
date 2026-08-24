@@ -15,6 +15,10 @@ run/main_scene="uid://5luhos24eh2i"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/Sprites/icon.svg"
 
+[autoload]
+
+Global="*uid://bh7g0lfq84w0f"
+
 [display]
 
 window/size/viewport_width=640
@@ -25,6 +29,7 @@ window/stretch/aspect="keep_height"
 [global_group]
 
 Damageable=""
+enemy=""
 King=""
 
 [gui]
