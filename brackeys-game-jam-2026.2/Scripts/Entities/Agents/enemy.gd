@@ -4,12 +4,17 @@ extends Agent
 
 var target_to_follow: Node2D = null
 
+
 func prepare():
-	var costume_num = Global.free_costumes.pick_random()
-	Global.free_costumes.erase(costume_num)
-	print("Chose this costume:", costume_num)
-	print(Global.free_costumes)
-	animated_sprite_2d.play(str(costume_num))
+	if Global.free_costumes.size() > 0:
+		var costume_num = Global.free_costumes.pick_random()
+		print("Chose this costume:", costume_num)
+		Global.free_costumes.erase(costume_num)
+		print(Global.free_costumes)
+		animated_sprite_2d.play(str(costume_num))
+		Global.enemy_costumes.append(costume_num)
+	else: 
+		animated_sprite_2d.play("1")
 
 func abilities():
 	if target_to_follow != null:

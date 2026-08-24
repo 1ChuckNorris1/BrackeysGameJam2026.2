@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cs4ncfj4lpa1o"]
 
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scenes/Menu_UI/button_class.gd" id="1_tyo02"]
+[ext_resource type="PackedScene" uid="uid://xrwf4wuhypeq" path="res://Scenes/Level/level_1.tscn" id="2_0wxo3"]
 [ext_resource type="PackedScene" uid="uid://cdiqcn0t6fcgf" path="res://Scenes/test_scene.tscn" id="2_l2p8p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
@@ -67,7 +68,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Castle"
 script = ExtResource("1_tyo02")
-link = ExtResource("2_l2p8p")
+link = ExtResource("2_0wxo3")
 
 [node name="Settings_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=759261908]
 layout_mode = 2

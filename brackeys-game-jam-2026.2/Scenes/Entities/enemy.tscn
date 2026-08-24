@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgr5a751j8033"]
 
-[ext_resource type="Script" uid="uid://dtvlabv2j1ixp" path="res://Scripts/enemy.gd" id="1_o6kgl"]
+[ext_resource type="Script" uid="uid://dtvlabv2j1ixp" path="res://Scripts/Entities/Agents/enemy.gd" id="1_o6kgl"]
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="2_ge2ll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
@@ -543,7 +543,6 @@ script = ExtResource("1_o6kgl")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true
 max_speed = 1000.0
-debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
 position = Vector2(0, 13.569322)

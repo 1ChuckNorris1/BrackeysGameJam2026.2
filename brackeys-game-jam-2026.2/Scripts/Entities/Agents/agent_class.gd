@@ -34,6 +34,9 @@ func _ready():
 	nav_agent.velocity_computed.connect(_on_navigation_agent_2d_velocity_computed)
 	prepare()
 	call_deferred("_on_nav_finished")
+	await get_tree().process_frame
+	animated_sprite_2d.frame = 0
+	animated_sprite_2d.stop()
 	
 func prepare():
 	pass

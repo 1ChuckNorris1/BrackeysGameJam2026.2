@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d1yaaq5gi4l0q"]
 
-[ext_resource type="Script" uid="uid://ct6278s1fw2j" path="res://Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Script" uid="uid://ct6278s1fw2j" path="res://Scripts/Entities/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://assets/Sprites/Player/Player.png" id="1_xhfnw"]
 [ext_resource type="PackedScene" uid="uid://d3lgqv6al8fof" path="res://Scenes/damage_component.tscn" id="4_5ixxa"]
 
@@ -453,5 +453,9 @@ pitch_scale = 3.0
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Damage_component" unique_id=1240131318]
 position = Vector2(-1, 23)
 shape = SubResource("RectangleShape2D_ulfyr")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=903664765]
+position = Vector2(0, 19)
+radius = 14.55
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
