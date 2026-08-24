@@ -6,8 +6,6 @@ extends CharacterBody2D
 
 @export var base_speed: float = 75.0
 var speed: float
-@export var min_speed: float = 50.0
-@export var max_speed: float = 100.0
 
 @export var waypoint_container: Node2D
 
@@ -18,9 +16,14 @@ var speed: float
 
 var wackel_time: float = 0.0
 
+@export_group("Waiting")
+var is_waiting: bool = false
+@export var wait_chance: float = 0.5    
+@export var max_wait_time: float = 3.0 
+
+
 var waypoints: Array[Node]
 var waypoint_index = 0
-
 var now_waypoint: Node2D
 
 var is_chasing: bool = false
@@ -42,6 +45,14 @@ func prepare():
 	pass
 
 func _physics_process(delta: float) -> void:
+	if is_chasing: is_waiting = false
+	if is_waiting: 
+		nav_agent.velocity = Vector2.ZERO
+		velocity = velocity.move_toward(Vector2.ZERO, 100)
+		move_and_slide()
+		handle_wackeln(delta)
+		return
+
 	var next_path_pos = nav_agent.get_next_path_position()
 	var direction = global_position.direction_to(next_path_pos)
 	var new_velocity = direction * speed 
@@ -53,10 +64,10 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float) -> void:
 	var speed_randomizer = randf_range(0,3000)
 	if speed_randomizer > 2999:
-		if speed < max_speed:
+		if speed < base_speed + 50:
 			speed += 20
 	elif speed_randomizer < 1:
-		if speed > min_speed:
+		if speed > base_speed - 50:
 			speed -= 20
 	
 func abilities():
@@ -64,6 +75,11 @@ func abilities():
 
 func _on_nav_finished():
 	if is_chasing or waypoints.size() <= 0: return
+	if randf() < wait_chance:
+		is_waiting = true
+		var wait_time = randf_range(0, max_wait_time)
+		await get_tree().create_timer(wait_time).timeout
+		is_waiting = false
 	var new_position = select_next_waypoint().global_position
 	make_path(new_position)
 	

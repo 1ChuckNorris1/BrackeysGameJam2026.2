@@ -440,7 +440,7 @@ animation = &"dying"
 autoplay = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634772725]
-position = Vector2(5.6425995e-07, 20.5)
+position = Vector2(0, 20)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_vld8h")
 disabled = true

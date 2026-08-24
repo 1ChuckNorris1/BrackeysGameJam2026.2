@@ -749,7 +749,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ulfyr")
 position = Vector2(-16, 2)
 scale = Vector2(2.855, 2.855)
 sprite_frames = SubResource("SpriteFrames_wtlyx")
-animation = &"40"
+animation = &"1"
 offset = Vector2(18.8, 0)
 
 [node name="Waypoints" type="Node2D" parent="." unique_id=1446792558]
@@ -777,13 +777,38 @@ position = Vector2(136, -64)
 [node name="Waypoint7" type="Marker2D" parent="Waypoints" unique_id=847582363]
 position = Vector2(250, -49)
 
+[node name="KingsPath" type="Node2D" parent="." unique_id=63451282]
+position = Vector2(265, 202)
+scale = Vector2(2.26, 2.26)
+
+[node name="Waypoint1" type="Marker2D" parent="KingsPath" unique_id=1488524964]
+position = Vector2(-98.23009, 17.69912)
+
+[node name="Waypoint2" type="Marker2D" parent="KingsPath" unique_id=210482772]
+position = Vector2(-133.62833, -67.25665)
+
+[node name="Waypoint3" type="Marker2D" parent="KingsPath" unique_id=1594883593]
+position = Vector2(-53.097336, -93.80533)
+
+[node name="Waypoint4" type="Marker2D" parent="KingsPath" unique_id=224129845]
+position = Vector2(-96.460175, -162.83186)
+
+[node name="Waypoint5" type="Marker2D" parent="KingsPath" unique_id=1069375945]
+position = Vector2(-12.389381, -172.56638)
+
+[node name="Waypoint6" type="Marker2D" parent="KingsPath" unique_id=214144860]
+position = Vector2(36.283188, -286.72568)
+
+[node name="Waypoint7" type="Marker2D" parent="KingsPath" unique_id=10080620]
+position = Vector2(116.37167, -266.3717)
+
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=737811832]
 y_sort_enabled = true
 navigation_polygon = SubResource("NavigationPolygon_akeww")
 
 [node name="king_agent" parent="NavigationRegion2D" unique_id=1024896108 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("4_rhkcd")]
-position = Vector2(28, 46)
-waypoint_container = NodePath("../../Waypoints")
+position = Vector2(40, 357)
+waypoint_container = NodePath("../../KingsPath")
 
 [node name="enemy" parent="NavigationRegion2D" unique_id=1430953937 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("5_qcwdr")]
 position = Vector2(603, 335)
@@ -794,18 +819,6 @@ position = Vector2(603, 335)
 waypoint_container = NodePath("../../Waypoints")
 
 [node name="enemy3" parent="NavigationRegion2D" unique_id=243145087 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(603, 335)
-waypoint_container = NodePath("../../Waypoints")
-
-[node name="enemy4" parent="NavigationRegion2D" unique_id=1501537477 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(603, 335)
-waypoint_container = NodePath("../../Waypoints")
-
-[node name="enemy5" parent="NavigationRegion2D" unique_id=557154864 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(603, 335)
-waypoint_container = NodePath("../../Waypoints")
-
-[node name="enemy6" parent="NavigationRegion2D" unique_id=121877941 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("5_qcwdr")]
 position = Vector2(603, 335)
 waypoint_container = NodePath("../../Waypoints")
 
