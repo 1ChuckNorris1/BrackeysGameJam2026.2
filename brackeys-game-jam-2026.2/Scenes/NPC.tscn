@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wuccshbuerod"]
 
-[ext_resource type="Script" uid="uid://br005m36pd1ka" path="res://Scripts/npc.gd" id="1_fo5tq"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_fo5tq"]
 [ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://Sprites/Player/Player.png" id="2_xs5w8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
@@ -420,6 +420,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ulfyr"]
+radius = 31.400637
+
 [node name="Npc" type="CharacterBody2D" unique_id=348945450]
 script = ExtResource("1_fo5tq")
 
@@ -430,3 +433,6 @@ animation = &"dying"
 autoplay = "idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1706500682]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=256868091]
+shape = SubResource("CircleShape2D_ulfyr")

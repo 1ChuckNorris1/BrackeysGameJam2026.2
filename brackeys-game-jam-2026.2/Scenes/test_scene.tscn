@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://wuccshbuerod" path="res://Scenes/NPC.tscn" id="2_50ct6"]
 [ext_resource type="Texture2D" uid="uid://c3qqhcbsar2j8" path="res://Sprites/icon.svg" id="2_r5l72"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ulfyr"]
+radius = 37.696156
+
 [node name="TestScene" type="Node2D" unique_id=1397237555]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=680718213]
@@ -20,6 +23,9 @@ texture = ExtResource("2_r5l72")
 [node name="Npc" parent="." unique_id=348945450 node_paths=PackedStringArray("waypoints") instance=ExtResource("2_50ct6")]
 position = Vector2(10, 24)
 waypoints = [NodePath("../Waypoints/Waypoint1"), NodePath("../Waypoints/Waypoint2"), NodePath("../Waypoints/Waypoint3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Npc" unique_id=1766944225]
+shape = SubResource("CircleShape2D_ulfyr")
 
 [node name="Waypoints" type="Node2D" parent="." unique_id=4299661]
 
