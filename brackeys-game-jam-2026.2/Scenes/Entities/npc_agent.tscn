@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://4j8ing3ctbsl" path="res://Scripts/Entities/Agents/npc_agent.gd" id="1_s3psu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
-radius = 6.095892
-height = 26.014061
+radius = 8.996175
+height = 31.015976
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s3psu"]
 atlas = ExtResource("1_kw180")
@@ -681,8 +681,8 @@ script = ExtResource("1_s3psu")
 avoidance_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
-position = Vector2(0, 9.999999)
-rotation = -1.5416431
+position = Vector2(0, 7)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ulfyr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1365500111]
