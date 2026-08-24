@@ -1,13 +1,46 @@
 [gd_scene format=3 uid="uid://cs4ncfj4lpa1o"]
 
-[ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scenes/Menu_UI/button_class.gd" id="1_tyo02"]
-[ext_resource type="PackedScene" uid="uid://xrwf4wuhypeq" path="res://Scenes/Level/level_1.tscn" id="2_0wxo3"]
-[ext_resource type="PackedScene" uid="uid://cdiqcn0t6fcgf" path="res://Scenes/test_scene.tscn" id="2_l2p8p"]
+[ext_resource type="Script" uid="uid://ca4lboyrnmbkh" path="res://Scripts/UIScript/button_level_class.gd" id="1_0wxo3"]
+[ext_resource type="PackedScene" uid="uid://xrwf4wuhypeq" path="res://Scenes/Level/castle1.tscn" id="2_0wxo3"]
+[ext_resource type="PackedScene" uid="uid://bprmnhbtfthft" path="res://Scenes/Level/castle2.tscn" id="3_d0kbu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
 font_size = 70
 
-[node name="MainMenu" type="Control" unique_id=1805815168]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyo02"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2p8p"]
+bg_color = Color(0.95686275, 0.49411765, 0.105882354, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wxo3"]
+bg_color = Color(0.44313726, 0.6666667, 0.20392157, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[node name="LevelMenu" type="Control" unique_id=1805815168]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -67,12 +100,20 @@ theme_override_constants/separation = 30
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Castle"
-script = ExtResource("1_tyo02")
+script = ExtResource("1_0wxo3")
+level_name = "Castle1"
+style_locked = SubResource("StyleBoxFlat_tyo02")
+style_unlocked = SubResource("StyleBoxFlat_l2p8p")
+style_cleared = SubResource("StyleBoxFlat_0wxo3")
 link = ExtResource("2_0wxo3")
 
 [node name="Settings_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=759261908]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Market"
-script = ExtResource("1_tyo02")
-link = ExtResource("2_l2p8p")
+script = ExtResource("1_0wxo3")
+level_name = "Castle2"
+style_locked = SubResource("StyleBoxFlat_tyo02")
+style_unlocked = SubResource("StyleBoxFlat_l2p8p")
+style_cleared = SubResource("StyleBoxFlat_0wxo3")
+link = ExtResource("3_d0kbu")
