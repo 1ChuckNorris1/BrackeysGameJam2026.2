@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://db5cdr434544v"]
+
+[ext_resource type="Script" uid="uid://pa0pmy7ak2tn" path="res://Scripts/UIScript/settings_menu.gd" id="1_od2ni"]
+[ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_w64k6"]
+[ext_resource type="PackedScene" uid="uid://5luhos24eh2i" path="res://Scenes/Menu_UI/MainMenu.tscn" id="3_v4cfq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1cbk1"]
+font_size = 45
+
+[node name="SettingsMenu" type="Control" unique_id=1805815168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_od2ni")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1815698539]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20877446, 0.050243165, 0.050243165, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=943692632]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.0
+offset_top = 22.0
+offset_right = 95.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_constants/separation = 26
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1130948610]
+layout_mode = 2
+text = "Settings"
+label_settings = SubResource("LabelSettings_1cbk1")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=178562759]
+layout_mode = 2
+theme_override_constants/margin_top = 27
+
+[node name="FullscreenCheckbox" type="CheckBox" parent="VBoxContainer" unique_id=236164804]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="ResolutionOption" type="OptionButton" parent="VBoxContainer" unique_id=1430757189]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ToMainMenuButton" type="Button" parent="." unique_id=1818799602]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "X"
+script = ExtResource("2_w64k6")
+link = ExtResource("3_v4cfq")

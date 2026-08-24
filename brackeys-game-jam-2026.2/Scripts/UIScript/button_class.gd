@@ -13,5 +13,7 @@ func update_level_status():
 	pass
 
 func _change_to_next_scene():
-	if link == null: return
+	if link == null: 
+		return
+	print("changing scene")
 	get_tree().change_scene_to_packed(link)
