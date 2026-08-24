@@ -1,6 +1,6 @@
 extends Node
 
-@export var num_of_costumes: int = 26
+@export var num_of_costumes: int = 40
 var free_costumes: Array[int]
 var enemy_costumes: Array[int]
 

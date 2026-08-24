@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="2_plaf6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
-radius = 2.948597
-height = 16.512152
+radius = 3.9983003
+height = 27.775047
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_plaf6"]
 atlas = ExtResource("2_plaf6")
@@ -38,11 +38,13 @@ script = ExtResource("1_27ur3")
 avoidance_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
-position = Vector2(0.58997047, 13.56932)
+position = Vector2(-0.5, 12)
 rotation = -1.5416431
 shape = SubResource("CapsuleShape2D_ulfyr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458 groups=["Damageable"]]
+position = Vector2(-2, -16)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ulfyr")
 animation = &"idle"
 frame_progress = 0.082740515
