@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cdiqcn0t6fcgf"]
 
 [ext_resource type="PackedScene" uid="uid://bttllmbvomi8j" path="res://Scenes/Entities/king_agent.tscn" id="2_50ct6"]
-[ext_resource type="Texture2D" uid="uid://c3qqhcbsar2j8" path="res://Sprites/icon.svg" id="2_r5l72"]
+[ext_resource type="Texture2D" uid="uid://c3qqhcbsar2j8" path="res://assets/Sprites/icon.svg" id="2_r5l72"]
 [ext_resource type="PackedScene" uid="uid://bgr5a751j8033" path="res://Scenes/Entities/enemy.tscn" id="3_50ct6"]
+[ext_resource type="PackedScene" uid="uid://bd2d512dvfjvb" path="res://Scenes/Entities/npc_agent.tscn" id="4_ak5v8"]
+[ext_resource type="PackedScene" uid="uid://d1yaaq5gi4l0q" path="res://Scenes/Player.tscn" id="5_x033f"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ulfyr"]
 vertices = PackedVector2Array(1155.9063, 644.10156, -16.6875, 656.8828, 2.7109375, 3.8828125, 1150.0781, -9.8671875)
@@ -49,11 +51,32 @@ position = Vector2(136, -64)
 position = Vector2(250, -49)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1897708610]
+y_sort_enabled = true
 navigation_polygon = SubResource("NavigationPolygon_ulfyr")
 
 [node name="king_agent" parent="NavigationRegion2D" unique_id=1024896108 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("2_50ct6")]
+position = Vector2(28, 46)
 waypoint_container = NodePath("../../Waypoints")
 
-[node name="enemy" parent="NavigationRegion2D" unique_id=1472296499 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("3_50ct6")]
-position = Vector2(514, 284)
+[node name="enemy" parent="NavigationRegion2D" unique_id=1638780300 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("3_50ct6")]
+position = Vector2(603, 335)
 waypoint_container = NodePath("../../Waypoints")
+
+[node name="NPC_Agent" parent="NavigationRegion2D" unique_id=1916021266 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("4_ak5v8")]
+position = Vector2(432, 104)
+waypoint_container = NodePath("../../Waypoints")
+
+[node name="NPC_Agent2" parent="NavigationRegion2D" unique_id=1849452090 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("4_ak5v8")]
+position = Vector2(230, 318)
+waypoint_container = NodePath("../../Waypoints")
+
+[node name="NPC_Agent3" parent="NavigationRegion2D" unique_id=363279091 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("4_ak5v8")]
+position = Vector2(564, 379)
+waypoint_container = NodePath("../../Waypoints")
+
+[node name="NPC_Agent4" parent="NavigationRegion2D" unique_id=1795018866 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("4_ak5v8")]
+position = Vector2(586, 186)
+waypoint_container = NodePath("../../Waypoints")
+
+[node name="Player" parent="NavigationRegion2D" unique_id=1244140961 instance=ExtResource("5_x033f")]
+position = Vector2(185, 148)

@@ -302,11 +302,9 @@ radius = 228.87065
 radius = 39.611595
 
 [node name="enemy" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable"]]
-scale = Vector2(1.695, 1.695)
+position = Vector2(0, -31)
+scale = Vector2(2, 2)
 script = ExtResource("1_o6kgl")
-speed = null
-min_speed = null
-max_speed = null
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true

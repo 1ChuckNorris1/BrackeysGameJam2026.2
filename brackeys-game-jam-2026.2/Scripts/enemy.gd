@@ -1,6 +1,6 @@
 extends Agent
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 
 var target_to_follow: Node2D = null
 

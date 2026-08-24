@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1yaaq5gi4l0q"]
 
 [ext_resource type="Script" uid="uid://ct6278s1fw2j" path="res://Scripts/player.gd" id="1_kyqiw"]
-[ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://Sprites/Player/Player.png" id="1_xhfnw"]
+[ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://assets/Sprites/Player/Player.png" id="1_xhfnw"]
 [ext_resource type="PackedScene" uid="uid://d3lgqv6al8fof" path="res://Scenes/damage_component.tscn" id="4_5ixxa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
@@ -428,6 +428,7 @@ size = Vector2(29, 48)
 size = Vector2(72, 88)
 
 [node name="Player" type="CharacterBody2D" unique_id=1244140961]
+position = Vector2(0, -37)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_kyqiw")

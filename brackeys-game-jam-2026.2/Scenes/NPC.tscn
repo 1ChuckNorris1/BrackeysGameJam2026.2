@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://wuccshbuerod"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_fo5tq"]
-[ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://Sprites/Player/Player.png" id="2_xs5w8"]
+[ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://assets/Sprites/Player/Player.png" id="2_xs5w8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
 atlas = ExtResource("2_xs5w8")
@@ -424,7 +423,6 @@ animations = [{
 radius = 31.400637
 
 [node name="Npc" type="CharacterBody2D" unique_id=348945450]
-script = ExtResource("1_fo5tq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1779095527]
 scale = Vector2(4, 4)

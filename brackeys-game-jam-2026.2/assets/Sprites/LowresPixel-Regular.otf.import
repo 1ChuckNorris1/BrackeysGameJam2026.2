@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://gvvq3rc0jxlk"
-path="res://.godot/imported/LowresPixel-Regular.otf-12b1a414dfe523b7f1a95de15d8c7f93.fontdata"
+path="res://.godot/imported/LowresPixel-Regular.otf-9dec3478ef633ea05a896817680ede2c.fontdata"
 
 [deps]
 
-source_file="res://Sprites/LowresPixel-Regular.otf"
-dest_files=["res://.godot/imported/LowresPixel-Regular.otf-12b1a414dfe523b7f1a95de15d8c7f93.fontdata"]
+source_file="res://assets/Sprites/LowresPixel-Regular.otf"
+dest_files=["res://.godot/imported/LowresPixel-Regular.otf-9dec3478ef633ea05a896817680ede2c.fontdata"]
 
 [params]
 

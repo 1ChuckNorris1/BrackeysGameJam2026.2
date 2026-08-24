@@ -295,8 +295,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="NPC_Agent" type="CharacterBody2D" unique_id=1024896108]
-scale = Vector2(1.695, 1.695)
+[node name="NPC_Agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable"]]
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
 script = ExtResource("1_s3psu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]

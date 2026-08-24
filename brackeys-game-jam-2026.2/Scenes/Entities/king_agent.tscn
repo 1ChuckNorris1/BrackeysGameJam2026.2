@@ -30,7 +30,8 @@ animations = [{
 }]
 
 [node name="king_agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable", "King"]]
-scale = Vector2(1.695, 1.695)
+position = Vector2(0, -32)
+scale = Vector2(2, 2)
 script = ExtResource("1_27ur3")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
