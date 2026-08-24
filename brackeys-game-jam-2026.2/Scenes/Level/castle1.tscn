@@ -687,9 +687,9 @@ animations = [{
 }]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_akeww"]
-vertices = PackedVector2Array(1155.9063, 644.10156, -16.6875, 656.8828, 2.7109375, 3.8828125, 1150.0781, -9.8671875)
+vertices = PackedVector2Array(1242.2031, 639.1328, -706.1094, 665.84375, -542.78125, -1304.0313, 1283.7813, -1311.9531)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-27, 667, 1166, 654, 1160, -20, -7, -6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-717, 676, 1252, 649, 1294, -1322, -552, -1314)])
 
 [node name="Level1" type="Node2D" unique_id=2102359895]
 script = ExtResource("1_fynpg")
@@ -842,6 +842,6 @@ waypoint_container = NodePath("../../Waypoints")
 position = Vector2(185, 148)
 
 [node name="Camera2D" type="Camera2D" parent="NavigationRegion2D/Player" unique_id=1717065124]
-zoom = Vector2(0.69, 0.69)
+zoom = Vector2(0.5, 0.5)
 
 [connection signal="pressed" from="CanvasLayer/QuitButton" to="." method="_on_button_pressed"]
