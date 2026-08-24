@@ -424,8 +424,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vld8h"]
 size = Vector2(29, 48)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nn08x"]
-size = Vector2(72, 88)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ulfyr"]
+size = Vector2(61, 70)
 
 [node name="Player" type="CharacterBody2D" unique_id=1244140961]
 position = Vector2(0, -37)
@@ -449,14 +449,9 @@ disabled = true
 pitch_scale = 3.0
 
 [node name="Damage_component" parent="." unique_id=430981454 instance=ExtResource("4_5ixxa")]
-position = Vector2(36, 10)
-collision_layer = 0
-collision_mask = 2
 
-[node name="CollisionShape2D" parent="Damage_component" index="0" unique_id=1018896342]
-shape = SubResource("RectangleShape2D_nn08x")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Damage_component" unique_id=1240131318]
+position = Vector2(54, 12)
+shape = SubResource("RectangleShape2D_ulfyr")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="body_entered" from="Damage_component" to="." method="_on_damage_component_body_entered"]
-
-[editable path="Damage_component"]
