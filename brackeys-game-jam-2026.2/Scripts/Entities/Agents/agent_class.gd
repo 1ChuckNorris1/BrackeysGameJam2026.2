@@ -4,17 +4,17 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 
-@export var base_speed: float = 100.0
+@export var base_speed: float = 75.0
 var speed: float
 @export var min_speed: float = 50.0
-@export var max_speed: float = 150.0
+@export var max_speed: float = 100.0
 
 @export var waypoint_container: Node2D
 
 @export_group("Lauf Animation")
-@export var wackel_speed: float = 15.0    
-@export var wackel_winkel: float = 12.0  
-@export var sprung_hoehe: float = 3.0       
+@export var wackel_speed: float = 10.0    
+@export var wackel_winkel: float = 7.0  
+@export var sprung_hoehe: float = 2.0       
 
 var wackel_time: float = 0.0
 
