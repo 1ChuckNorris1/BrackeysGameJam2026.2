@@ -19,6 +19,7 @@ config/icon="res://assets/Sprites/icon.svg"
 
 Global="*uid://bh7g0lfq84w0f"
 Gamemanager="*uid://drdoxca8h8my6"
+SettingsManager="*uid://dp8w6rfmgvh36"
 
 [display]
 

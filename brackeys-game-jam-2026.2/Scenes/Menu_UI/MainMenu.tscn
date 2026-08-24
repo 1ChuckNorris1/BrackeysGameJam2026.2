@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://ppirirpfnqrd" path="res://Scripts/main_menu.gd" id="1_tt5f1"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_0vuxs"]
+[ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="2_61ku3"]
 [ext_resource type="PackedScene" uid="uid://cs4ncfj4lpa1o" path="res://Scenes/Menu_UI/LevelMenu.tscn" id="3_exbwq"]
 [ext_resource type="Script" uid="uid://cq8qihx4pv5ho" path="res://Scripts/UIScript/quit_button.gd" id="4_exbwq"]
+[ext_resource type="PackedScene" uid="uid://db5cdr434544v" path="res://Scenes/Menu_UI/SettingsMenu.tscn" id="5_nhn5n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
 font_size = 70
+font_color = Color(0.2784314, 0.1764706, 0.23529412, 1)
 
 [node name="MainMenu" type="Control" unique_id=1805815168]
 layout_mode = 3
@@ -18,12 +21,21 @@ grow_vertical = 2
 script = ExtResource("1_tt5f1")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=762112624]
+custom_minimum_size = Vector2(0, 585.205)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -121.0
+offset_top = -113.0
+offset_right = 18.105286
+offset_bottom = 112.20502
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_scale = Vector2(1.915, 1.915)
+texture = ExtResource("2_61ku3")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=506071062]
 layout_mode = 0
@@ -37,35 +49,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -294.0
+offset_top = -163.0
+offset_right = 57.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 24
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=824654265]
 layout_mode = 2
-text = "The King's Shield"
+text = "The King's 
+Shield"
 label_settings = SubResource("LabelSettings_ulfyr")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1078385390]
-layout_mode = 2
-theme_override_constants/margin_top = 42
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=899876932]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1501334419]
-layout_mode = 2
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1501334419]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 169.0
+offset_right = 624.0
+offset_bottom = 346.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 30
 
-[node name="Play_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1022431057]
+[node name="Play_Button" type="Button" parent="VBoxContainer2" unique_id=1022431057]
 texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
@@ -74,17 +82,17 @@ text = "Play
 script = ExtResource("2_0vuxs")
 link = ExtResource("3_exbwq")
 
-[node name="Settings_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=759261908]
+[node name="Settings_Button" type="Button" parent="VBoxContainer2" unique_id=759261908]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
-disabled = true
 text = "Settings
 "
 script = ExtResource("2_0vuxs")
+link = ExtResource("5_nhn5n")
 
-[node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=85595811]
+[node name="Quit_Button" type="Button" parent="VBoxContainer2" unique_id=85595811]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
-text = "Quit+
+text = "Quit
 "
 script = ExtResource("4_exbwq")
