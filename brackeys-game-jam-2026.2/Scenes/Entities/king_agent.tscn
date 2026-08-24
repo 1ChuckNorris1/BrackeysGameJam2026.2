@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bttllmbvomi8j"]
+
+[ext_resource type="Script" uid="uid://bgey433m5g3xl" path="res://Scripts/king_agent.gd" id="1_27ur3"]
+[ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="2_plaf6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
+radius = 2.948597
+height = 16.512152
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plaf6"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(0, 0, 18, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne00k"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(160, 0, 18, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulfyr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plaf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne00k")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="king_agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable", "King"]]
+scale = Vector2(1.695, 1.695)
+script = ExtResource("1_27ur3")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
+avoidance_enabled = true
+debug_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
+position = Vector2(0.58997047, 13.56932)
+rotation = -1.5416431
+shape = SubResource("CapsuleShape2D_ulfyr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458 groups=["Damageable"]]
+sprite_frames = SubResource("SpriteFrames_ulfyr")
+animation = &"idle"
+frame_progress = 0.082740515

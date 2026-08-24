@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cs4ncfj4lpa1o"]
+
+[ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scenes/Menu_UI/button_class.gd" id="1_tyo02"]
+[ext_resource type="PackedScene" uid="uid://cdiqcn0t6fcgf" path="res://Scenes/test_scene.tscn" id="2_l2p8p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
+font_size = 70
+
+[node name="MainMenu" type="Control" unique_id=1805815168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=762112624]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=506071062]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=725368876]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=824654265]
+layout_mode = 2
+text = "Level selection"
+label_settings = SubResource("LabelSettings_ulfyr")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1078385390]
+layout_mode = 2
+theme_override_constants/margin_top = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=899876932]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1501334419]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Castle_Level_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1022431057]
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+text = "Castle"
+script = ExtResource("1_tyo02")
+link = ExtResource("2_l2p8p")
+
+[node name="Settings_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=759261908]
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+text = "Market"
+script = ExtResource("1_tyo02")
+link = ExtResource("2_l2p8p")

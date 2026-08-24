@@ -4,7 +4,11 @@ extends CharacterBody2D
 
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 
-@export var speed = 300.0
+@export var base_speed: float = 100.0
+var speed: float
+@export var min_speed: float = 50.0
+@export var max_speed: float = 150.0
+
 @export var waypoint_container: Node2D
 
 var waypoints: Array[Node]
@@ -12,7 +16,10 @@ var waypoint_index = 0
 
 var now_waypoint: Node2D
 
+var is_chasing: bool = false
+
 func _ready():
+	speed = base_speed
 	for waypoint in waypoint_container.get_children():
 		if waypoint is Marker2D:
 			waypoints.append(waypoint)
@@ -34,17 +41,18 @@ func _physics_process(_delta: float) -> void:
 	
 func _process(_delta: float) -> void:
 	var speed_randomizer = randf_range(0,3000)
-	if speed_randomizer > 2500:
-		if speed < 500:
+	if speed_randomizer > 2999:
+		if speed < max_speed:
 			speed += 20
-	elif speed_randomizer < 50:
-		if speed > 100:
+	elif speed_randomizer < 1:
+		if speed > min_speed:
 			speed -= 20
 	
 func abilities():
 	pass
 
 func _on_nav_finished():
+	if is_chasing or waypoints.size() <= 0: return
 	var new_position = select_next_waypoint().global_position
 	make_path(new_position)
 	

@@ -1,11 +1,25 @@
 extends Agent
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+var target_to_follow: Node2D = null
+
+func prepare():
+	animated_sprite_2d.play("4")
+
+func abilities():
+	if target_to_follow != null:
+		make_path(target_to_follow.global_position)
+		
 func _on_controlled_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("King"):
-		speed = 400
-		make_path(body.global_position)
+		target_to_follow = body
+		speed = 200
+		is_chasing = true
 
 func _on_murder_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("King"):
-		print("Game Over")
+		body.take_damage()
+
+func take_damage():
+	call_deferred("queue_free")

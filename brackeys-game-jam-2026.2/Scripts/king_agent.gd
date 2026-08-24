@@ -8,4 +8,4 @@ func take_damage():
 	print("Game Over")
 
 func prepare():
-	animated_sprite_2d.play(str(randi_range(1,15)))
+	animated_sprite_2d.play("idle")

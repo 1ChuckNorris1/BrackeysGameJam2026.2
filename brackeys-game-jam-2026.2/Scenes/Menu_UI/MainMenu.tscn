@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://5luhos24eh2i"]
 
 [ext_resource type="Script" uid="uid://ppirirpfnqrd" path="res://Scripts/main_menu.gd" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scenes/Menu_UI/button_class.gd" id="2_0vuxs"]
+[ext_resource type="PackedScene" uid="uid://cs4ncfj4lpa1o" path="res://Scenes/Menu_UI/LevelMenu.tscn" id="3_exbwq"]
+[ext_resource type="Script" uid="uid://cq8qihx4pv5ho" path="res://Scenes/Menu_UI/quit_button.gd" id="4_exbwq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
 font_size = 70
@@ -67,17 +70,19 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Play
 "
+script = ExtResource("2_0vuxs")
+link = ExtResource("3_exbwq")
 
 [node name="Settings_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=759261908]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Settings
 "
+script = ExtResource("2_0vuxs")
 
 [node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=85595811]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Quit+
 "
-
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/Play_Button" to="." method="_go_to_level_selection"]
+script = ExtResource("4_exbwq")

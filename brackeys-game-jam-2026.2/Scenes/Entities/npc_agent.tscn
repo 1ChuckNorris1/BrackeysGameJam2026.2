@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://4j8ing3ctbsl" path="res://Scripts/npc_agent.gd" id="1_s3psu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
-radius = 12.0
-height = 38.0
+radius = 2.1873665
+height = 7.0876436
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s3psu"]
 atlas = ExtResource("1_kw180")
@@ -14,6 +14,54 @@ region = Rect2(0, 32, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0oc5o"]
 atlas = ExtResource("1_kw180")
 region = Rect2(160, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6kgl"]
+atlas = ExtResource("1_kw180")
+region = Rect2(0, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge2ll"]
+atlas = ExtResource("1_kw180")
+region = Rect2(160, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygq1y"]
+atlas = ExtResource("1_kw180")
+region = Rect2(32, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx8ge"]
+atlas = ExtResource("1_kw180")
+region = Rect2(192, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ar56"]
+atlas = ExtResource("1_kw180")
+region = Rect2(64, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hroqg"]
+atlas = ExtResource("1_kw180")
+region = Rect2(224, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny53q"]
+atlas = ExtResource("1_kw180")
+region = Rect2(0, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaxvc"]
+atlas = ExtResource("1_kw180")
+region = Rect2(160, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0ta7"]
+atlas = ExtResource("1_kw180")
+region = Rect2(32, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbtin"]
+atlas = ExtResource("1_kw180")
+region = Rect2(192, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu0go"]
+atlas = ExtResource("1_kw180")
+region = Rect2(64, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxuwl"]
+atlas = ExtResource("1_kw180")
+region = Rect2(224, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cb1je"]
 atlas = ExtResource("1_kw180")
@@ -90,6 +138,72 @@ animations = [{
 }],
 "loop": 1,
 "name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6kgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge2ll")
+}],
+"loop": 1,
+"name": &"10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygq1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx8ge")
+}],
+"loop": 1,
+"name": &"11",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ar56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hroqg")
+}],
+"loop": 1,
+"name": &"12",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny53q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iaxvc")
+}],
+"loop": 1,
+"name": &"13",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0ta7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbtin")
+}],
+"loop": 1,
+"name": &"14",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu0go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxuwl")
+}],
+"loop": 1,
+"name": &"15",
 "speed": 5.0
 }, {
 "frames": [{
@@ -182,6 +296,7 @@ animations = [{
 }]
 
 [node name="NPC_Agent" type="CharacterBody2D" unique_id=1024896108]
+scale = Vector2(1.695, 1.695)
 script = ExtResource("1_s3psu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
@@ -189,10 +304,10 @@ avoidance_enabled = true
 debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
-position = Vector2(0, 24)
+position = Vector2(0, 13.569322)
 rotation = -1.5416431
 shape = SubResource("CapsuleShape2D_ulfyr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458 groups=["Damageable"]]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=805923336]
 sprite_frames = SubResource("SpriteFrames_ulfyr")
-animation = &"1"
+animation = &"13"
