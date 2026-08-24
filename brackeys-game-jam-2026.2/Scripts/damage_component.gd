@@ -15,5 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func attack() -> void:
 	for body in get_overlapping_bodies():
-		if body.is_in_group("enemy"):
+		if body.is_in_group("Damageable"):
 			body.take_damage()

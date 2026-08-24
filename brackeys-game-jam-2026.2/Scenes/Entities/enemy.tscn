@@ -1,82 +1,82 @@
-[gd_scene format=3 uid="uid://bd2d512dvfjvb"]
+[gd_scene format=3 uid="uid://bgr5a751j8033"]
 
-[ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="1_kw180"]
-[ext_resource type="Script" uid="uid://4j8ing3ctbsl" path="res://Scripts/npc_agent.gd" id="1_s3psu"]
+[ext_resource type="Script" uid="uid://dtvlabv2j1ixp" path="res://Scripts/enemy.gd" id="1_o6kgl"]
+[ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="2_ge2ll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
 radius = 12.0
 height = 38.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s3psu"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(0, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0oc5o"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(160, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cb1je"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(32, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gf8ed"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(192, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lb3sg"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(64, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_doycu"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(224, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrqwq"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(0, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7bnp"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(160, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbdfq"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(32, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3liyb"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(192, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8tg0"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(64, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ia7e6"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(224, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7wjj"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(0, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taycj"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(160, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rxsqh"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(32, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bvufy"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(192, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecxa2"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(64, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghm4h"]
-atlas = ExtResource("1_kw180")
+atlas = ExtResource("2_ge2ll")
 region = Rect2(224, 96, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ulfyr"]
@@ -181,8 +181,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="NPC_Agent" type="CharacterBody2D" unique_id=1024896108]
-script = ExtResource("1_s3psu")
+[sub_resource type="CircleShape2D" id="CircleShape2D_ulfyr"]
+radius = 122.016396
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1cbk1"]
+radius = 24.083189
+
+[node name="NPC_Agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable"]]
+script = ExtResource("1_o6kgl")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true
@@ -193,6 +199,20 @@ position = Vector2(0, 24)
 rotation = -1.5416431
 shape = SubResource("CapsuleShape2D_ulfyr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458 groups=["Damageable"]]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458]
 sprite_frames = SubResource("SpriteFrames_ulfyr")
 animation = &"1"
+
+[node name="ControlledArea" type="Area2D" parent="." unique_id=1397442811]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlledArea" unique_id=802804312]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_ulfyr")
+
+[node name="MurderArea" type="Area2D" parent="." unique_id=2010835346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MurderArea" unique_id=734962941]
+shape = SubResource("CircleShape2D_1cbk1")
+
+[connection signal="body_entered" from="ControlledArea" to="." method="_on_controlled_area_body_entered"]
+[connection signal="body_entered" from="MurderArea" to="." method="_on_murder_area_body_entered"]
