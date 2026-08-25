@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="1_kw180"]
 [ext_resource type="Script" uid="uid://4j8ing3ctbsl" path="res://Scripts/Entities/Agents/npc_agent.gd" id="1_s3psu"]
 [ext_resource type="Texture2D" uid="uid://cv61364qbes5k" path="res://assets/aseprite/NPCsDieAnimation.png" id="3_0oc5o"]
+[ext_resource type="PackedScene" uid="uid://ximwursx10rv" path="res://Scenes/Components/movement_particles_component.tscn" id="4_cb1je"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
 radius = 13.5
@@ -750,11 +751,16 @@ offset = Vector2(18.8, 0)
 
 [node name="DeathAnimation" type="AnimatedSprite2D" parent="." unique_id=729034662]
 unique_name_in_owner = true
+visible = false
 position = Vector2(6.000001, -9.5)
 scale = Vector2(2.1, 2.1)
 sprite_frames = SubResource("SpriteFrames_ulfyr")
 animation = &"die"
 frame = 7
 frame_progress = 1.0
+
+[node name="MovementParticlesComponent" parent="." unique_id=2100393624 instance=ExtResource("4_cb1je")]
+unique_name_in_owner = true
+position = Vector2(1.5, 12.5)
 
 [connection signal="animation_finished" from="DeathAnimation" to="." method="loose_level"]

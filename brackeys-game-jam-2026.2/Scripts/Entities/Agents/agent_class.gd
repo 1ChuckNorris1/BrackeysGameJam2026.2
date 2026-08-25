@@ -4,7 +4,9 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var die_animation: AnimatedSprite2D = %DeathAnimation
+@onready var movement_particles: Node2D = %MovementParticlesComponent
 
+@export var tile_map_layers: Array[TileMapLayer]
 @export var base_speed: float = 75.0
 var speed: float
 
@@ -30,6 +32,7 @@ var now_waypoint: Node2D
 var is_chasing: bool = false
 
 func _ready():
+	movement_particles.tile_map_layers = tile_map_layers
 	die_animation.visible = false
 	speed = base_speed
 	for waypoint in waypoint_container.get_children():
@@ -49,11 +52,14 @@ func prepare():
 func _physics_process(delta: float) -> void:
 	if is_chasing: is_waiting = false
 	if is_waiting: 
+		movement_particles.stop_particles()
 		nav_agent.velocity = Vector2.ZERO
 		velocity = velocity.move_toward(Vector2.ZERO, 100)
 		move_and_slide()
 		handle_wackeln(delta)
 		return
+	else:
+		movement_particles.start_particles()
 
 	var next_path_pos = nav_agent.get_next_path_position()
 	var direction = global_position.direction_to(next_path_pos)
