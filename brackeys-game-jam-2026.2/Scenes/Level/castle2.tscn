@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bprmnhbtfthft"]
 
-[ext_resource type="Script" uid="uid://diky37bysudrq" path="res://Scripts/level_class.gd" id="1_5y41o"]
+[ext_resource type="Script" uid="uid://diky37bysudrq" path="res://Scripts/UIScript/level_class.gd" id="1_5y41o"]
 [ext_resource type="PackedScene" uid="uid://yt8sadmdojbc" path="res://Scenes/Level/wanted_sign.tscn" id="2_5nfim"]
 [ext_resource type="PackedScene" uid="uid://bttllmbvomi8j" path="res://Scenes/Entities/king_agent.tscn" id="4_0ysm8"]
 [ext_resource type="PackedScene" uid="uid://bgr5a751j8033" path="res://Scenes/Entities/enemy.tscn" id="5_xy6r0"]

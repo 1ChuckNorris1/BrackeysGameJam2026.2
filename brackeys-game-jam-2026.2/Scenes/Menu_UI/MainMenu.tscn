@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5luhos24eh2i"]
 
-[ext_resource type="Script" uid="uid://ppirirpfnqrd" path="res://Scripts/main_menu.gd" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://ppirirpfnqrd" path="res://Scripts/UIScript/main_menu.gd" id="1_tt5f1"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_0vuxs"]
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="2_61ku3"]
 [ext_resource type="PackedScene" uid="uid://cs4ncfj4lpa1o" path="res://Scenes/Menu_UI/LevelMenu.tscn" id="3_exbwq"]
