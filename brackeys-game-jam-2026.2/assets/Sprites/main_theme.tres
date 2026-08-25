@@ -123,6 +123,39 @@ expand_margin_top = 9.0
 expand_margin_right = 4.0
 expand_margin_bottom = 9.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4d7b"]
+bg_color = Color(0.9019608, 0.28235295, 0.18039216, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cu5ps"]
+bg_color = Color(0.8536407, 0.3506207, 0.3425917, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld1gq"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
 [resource]
 default_font = ExtResource("1_d4d7b")
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -149,4 +182,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_1t373")
 Button/styles/normal_mirrored = SubResource("StyleBoxFlat_vt5mh")
 Button/styles/pressed = SubResource("StyleBoxFlat_yspdg")
 Button/styles/pressed_mirrored = SubResource("StyleBoxFlat_7lvcm")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_d4d7b")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_cu5ps")
+HSlider/styles/slider = SubResource("StyleBoxFlat_ld1gq")
 Label/colors/font_color = Color(0.6627451, 0.23137255, 0.23137255, 1)

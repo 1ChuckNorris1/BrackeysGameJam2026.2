@@ -2,10 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca4lboyrnmbkh" path="res://Scripts/UIScript/button_level_class.gd" id="1_0wxo3"]
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_d0kbu"]
-[ext_resource type="PackedScene" uid="uid://xrwf4wuhypeq" path="res://Scenes/Level/castle1.tscn" id="2_0wxo3"]
-[ext_resource type="PackedScene" uid="uid://bprmnhbtfthft" path="res://Scenes/Level/castle2.tscn" id="3_d0kbu"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="5_2wdfq"]
-[ext_resource type="PackedScene" uid="uid://cs4ncfj4lpa1o" path="res://Scenes/Menu_UI/LevelMenu.tscn" id="6_03hl5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
 font_size = 70
@@ -107,7 +104,7 @@ level_name = "Castle1"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-link = ExtResource("2_0wxo3")
+scene_path = "uid://xrwf4wuhypeq"
 
 [node name="Castle2_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=782450946]
 layout_mode = 2
@@ -118,7 +115,7 @@ level_name = "Castle2"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-link = ExtResource("2_0wxo3")
+scene_path = "uid://bprmnhbtfthft"
 
 [node name="Castle3_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=530862566]
 layout_mode = 2
@@ -129,7 +126,6 @@ level_name = "Castle3"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-link = ExtResource("2_0wxo3")
 
 [node name="Market1_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1521503361]
 layout_mode = 2
@@ -140,7 +136,6 @@ level_name = "Market1"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-link = ExtResource("2_0wxo3")
 
 [node name="Market2_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1780840203]
 layout_mode = 2
@@ -151,7 +146,6 @@ level_name = "Market2"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-link = ExtResource("2_0wxo3")
 
 [node name="Market3_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=759261908]
 layout_mode = 2
@@ -162,12 +156,12 @@ level_name = "Market3"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-link = ExtResource("3_d0kbu")
 
 [node name="ToMainMenuButton" type="Button" parent="." unique_id=167996834]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_font_sizes/font_size = 32
 text = "X"
 script = ExtResource("5_2wdfq")
-link = ExtResource("6_03hl5")
+scene_path = "uid://5luhos24eh2i"

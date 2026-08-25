@@ -4,8 +4,6 @@
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_0vuxs"]
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="2_61ku3"]
 [ext_resource type="Script" uid="uid://cq8qihx4pv5ho" path="res://Scripts/UIScript/quit_button.gd" id="4_exbwq"]
-[ext_resource type="PackedScene" uid="uid://db5cdr434544v" path="res://Scenes/Menu_UI/SettingsMenu.tscn" id="5_ndiwt"]
-[ext_resource type="PackedScene" uid="uid://cs4ncfj4lpa1o" path="res://Scenes/Menu_UI/LevelMenu.tscn" id="5_nhn5n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
 font_size = 70
@@ -76,7 +74,7 @@ theme_override_font_sizes/font_size = 38
 text = "Play
 "
 script = ExtResource("2_0vuxs")
-link = ExtResource("5_nhn5n")
+scene_path = "uid://cs4ncfj4lpa1o"
 
 [node name="Settings_Button" type="Button" parent="VBoxContainer2" unique_id=759261908]
 layout_mode = 2
@@ -84,7 +82,7 @@ theme_override_font_sizes/font_size = 38
 text = "Settings
 "
 script = ExtResource("2_0vuxs")
-link = ExtResource("5_ndiwt")
+scene_path = "uid://db5cdr434544v"
 
 [node name="Quit_Button" type="Button" parent="VBoxContainer2" unique_id=85595811]
 layout_mode = 2

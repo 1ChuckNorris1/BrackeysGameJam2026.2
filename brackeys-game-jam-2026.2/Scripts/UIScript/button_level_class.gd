@@ -6,6 +6,9 @@ extends ButtonClass
 @export var style_cleared: StyleBox
 
 func update_level_status() -> void:
+	if scene_path == null:
+		disabled = true
+		return
 	if Global.cleared_levels.has(level_name):
 		disabled = false
 		if style_cleared:

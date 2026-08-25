@@ -1,9 +1,6 @@
 class_name ButtonClass extends Button
 
-@export var link: PackedScene
-
-
-
+@export_file("*.tscn") var scene_path: String
 
 func _ready() -> void:
 	pressed.connect(_change_to_next_scene)
@@ -13,7 +10,7 @@ func update_level_status():
 	pass
 
 func _change_to_next_scene():
-	if link == null: 
+	if scene_path == null: 
 		return
 	print("changing scene")
-	get_tree().change_scene_to_packed(link)
+	get_tree().change_scene_to_file(scene_path)

@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cfys1q7wjueic"]
 
-[ext_resource type="Script" uid="uid://bf0vjktfvavs" path="res://Scripts/UIScript/levels_button.gd" id="1_mnqso"]
-[ext_resource type="PackedScene" uid="uid://cs4ncfj4lpa1o" path="res://Scenes/Menu_UI/LevelMenu.tscn" id="2_ncpl2"]
+[ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="1_ovn80"]
 [ext_resource type="Script" uid="uid://cq8qihx4pv5ho" path="res://Scripts/UIScript/quit_button.gd" id="3_dr4oc"]
-[ext_resource type="PackedScene" uid="uid://5luhos24eh2i" path="res://Scenes/Menu_UI/MainMenu.tscn" id="3_ncpl2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dm25u"]
 font_size = 70
@@ -64,15 +62,15 @@ theme_override_constants/separation = 30
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Levels"
-script = ExtResource("1_mnqso")
-link = ExtResource("2_ncpl2")
+script = ExtResource("1_ovn80")
+scene_path = "uid://cs4ncfj4lpa1o"
 
 [node name="MainMenu_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1588130099]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Main Menu"
-script = ExtResource("1_mnqso")
-link = ExtResource("3_ncpl2")
+script = ExtResource("1_ovn80")
+scene_path = "uid://5luhos24eh2i"
 
 [node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1968640092]
 visible = false
