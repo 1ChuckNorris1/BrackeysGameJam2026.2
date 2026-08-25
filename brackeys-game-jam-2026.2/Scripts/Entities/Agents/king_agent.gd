@@ -25,4 +25,5 @@ func win_game():
 
 func take_damage():
 	print("Game Over")
+	Gamemanager.end_game()
 	queue_free()

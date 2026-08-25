@@ -9,7 +9,6 @@ const SPEED = 300.0
 @onready var damage_component: Area2D = $Damage_component
 
 
-
 var damage_component_offset: Vector2
 var last_direction: Vector2 = Vector2.RIGHT
 var is_attacking: bool = false
