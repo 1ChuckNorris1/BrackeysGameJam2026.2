@@ -4,7 +4,7 @@ extends Node
 var free_costumes: Array[int]
 var enemy_costumes: Array[int]
 
-var all_levels: Array[String] = ["Castle1", "Castle2", "Market1", "Market2"]
+var all_levels: Array[String] = ["Castle1", "Castle2","Castle3", "Market1", "Market2", "Market3"]
 var cleared_levels: Array[String] = []
 var unlocked_levels: Array[String] = ["Castle1"]
 const SAVE_PATH = "user://savegame.cfg"
@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func reset_costumes():
 	enemy_costumes.clear()
+	free_costumes.clear()
 	for i in range(num_of_costumes):
 		free_costumes.append(i+1)
 

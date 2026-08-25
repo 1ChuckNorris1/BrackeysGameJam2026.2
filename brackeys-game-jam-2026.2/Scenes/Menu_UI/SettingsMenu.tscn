@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://pa0pmy7ak2tn" path="res://Scripts/UIScript/settings_menu.gd" id="1_od2ni"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_w64k6"]
-[ext_resource type="PackedScene" uid="uid://5luhos24eh2i" path="res://Scenes/Menu_UI/MainMenu.tscn" id="3_v4cfq"]
+[ext_resource type="PackedScene" uid="uid://cs4ncfj4lpa1o" path="res://Scenes/Menu_UI/LevelMenu.tscn" id="3_v4cfq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1cbk1"]
 font_size = 45

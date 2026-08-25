@@ -14,16 +14,17 @@ func _on_nav_finished():
 		await get_tree().create_timer(wait_time).timeout
 		is_waiting = false
 	if waypoint_index >= waypoints.size():
-		win_game()
+		win_level()
 		return
 	var target_waypoint = waypoints[waypoint_index]
 	make_path(target_waypoint.global_position)
 	waypoint_index += 1
 
-func win_game():
+func win_level():
 	print("Victory!")
-
+	get_tree().current_scene.win_level()
+	
 func take_damage():
 	print("Game Over")
-	Gamemanager.end_game()
+	Gamemanager.loose_game()
 	queue_free()
