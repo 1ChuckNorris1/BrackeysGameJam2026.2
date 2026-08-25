@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
+@onready var die_animation: AnimatedSprite2D = %DeathAnimation
 
 @export var base_speed: float = 75.0
 var speed: float
@@ -29,6 +30,7 @@ var now_waypoint: Node2D
 var is_chasing: bool = false
 
 func _ready():
+	die_animation.visible = false
 	speed = base_speed
 	for waypoint in waypoint_container.get_children():
 		if waypoint is Marker2D:

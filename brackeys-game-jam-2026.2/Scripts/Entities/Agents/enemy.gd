@@ -1,7 +1,7 @@
 extends Agent
 
 
-
+@export var attack_speed = 400.0
 var target_to_follow: Node2D = null
 
 
@@ -23,7 +23,7 @@ func abilities():
 func _on_controlled_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("King"):
 		target_to_follow = body
-		speed = 200
+		speed = attack_speed
 		is_chasing = true
 
 func _on_murder_area_body_entered(body: Node2D) -> void:
@@ -31,4 +31,15 @@ func _on_murder_area_body_entered(body: Node2D) -> void:
 		body.take_damage()
 
 func take_damage():
+	die()
+
+
+
+func die():
+	is_waiting = true
+	is_chasing = false
+	die_animation.visible = true
+	die_animation.play("die")
+	
+func delete_self():
 	call_deferred("queue_free")

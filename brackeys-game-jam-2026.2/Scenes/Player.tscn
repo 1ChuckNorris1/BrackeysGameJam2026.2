@@ -422,7 +422,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vld8h"]
-size = Vector2(33, 48)
+size = Vector2(48.5, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulfyr"]
 size = Vector2(98.5, 106)
@@ -440,7 +440,7 @@ animation = &"dying"
 autoplay = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634772725]
-position = Vector2(0, 20)
+position = Vector2(2.842171e-14, 12)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_vld8h")
 disabled = true

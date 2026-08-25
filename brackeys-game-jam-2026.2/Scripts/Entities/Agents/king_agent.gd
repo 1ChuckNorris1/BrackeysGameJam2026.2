@@ -25,6 +25,15 @@ func win_level():
 	get_tree().current_scene.win_level()
 	
 func take_damage():
+	die()
+
+func die(): 
+	is_waiting = true
+	die_animation.visible = true
+	die_animation.play("die")
+	animated_sprite_2d.queue_free()
+	
+func loose_level():
 	print("Game Over")
 	Gamemanager.loose_game()
 	queue_free()

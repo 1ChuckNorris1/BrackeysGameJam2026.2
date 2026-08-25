@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dtvlabv2j1ixp" path="res://Scripts/Entities/Agents/enemy.gd" id="1_o6kgl"]
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="2_ge2ll"]
+[ext_resource type="Texture2D" uid="uid://cv61364qbes5k" path="res://assets/aseprite/NPCsDieAnimation.png" id="3_ge2ll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
-radius = 9.495964
-height = 28.046402
+radius = 13.5
+height = 29.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ulfyr"]
-radius = 140.05527
+radius = 279.35324
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1cbk1"]
 radius = 39.611595
@@ -678,6 +679,62 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg7rt"]
+atlas = ExtResource("3_ge2ll")
+region = Rect2(320, 463, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghwxj"]
+atlas = ExtResource("3_ge2ll")
+region = Rect2(480, 463, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3am8q"]
+atlas = ExtResource("3_ge2ll")
+region = Rect2(640, 463, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvdxa"]
+atlas = ExtResource("3_ge2ll")
+region = Rect2(800, 463, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2xdn"]
+atlas = ExtResource("3_ge2ll")
+region = Rect2(960, 463, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0ss8"]
+atlas = ExtResource("3_ge2ll")
+region = Rect2(1120, 463, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_on283"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg7rt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghwxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3am8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvdxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2xdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0ss8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0ss8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0ss8")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 10.0
+}]
+
 [node name="enemy" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable"]]
 position = Vector2(0, -33)
 scale = Vector2(2, 2)
@@ -688,7 +745,7 @@ avoidance_enabled = true
 max_speed = 1000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
-position = Vector2(0, 7)
+position = Vector2(0.5, 3)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ulfyr")
 
@@ -712,5 +769,13 @@ sprite_frames = SubResource("SpriteFrames_o6kgl")
 animation = &"1"
 offset = Vector2(18.8, 0)
 
+[node name="DeathAnimation" type="AnimatedSprite2D" parent="." unique_id=349507686]
+unique_name_in_owner = true
+position = Vector2(6.000001, -9.5)
+scale = Vector2(2.1, 2.1)
+sprite_frames = SubResource("SpriteFrames_on283")
+animation = &"die"
+
 [connection signal="body_entered" from="ControlledArea" to="." method="_on_controlled_area_body_entered"]
 [connection signal="body_entered" from="MurderArea" to="." method="_on_murder_area_body_entered"]
+[connection signal="animation_finished" from="DeathAnimation" to="." method="delete_self"]

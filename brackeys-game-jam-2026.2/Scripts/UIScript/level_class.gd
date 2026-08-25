@@ -1,7 +1,7 @@
 class_name LevelClass
 extends Node2D
 
-@onready var canvas_layer: CanvasLayer = $CanvasLayer
+@onready var canvas_layer: CanvasLayer = $WantedSign
 @export var level_name:String = "Level"
 
 func _ready() -> void:

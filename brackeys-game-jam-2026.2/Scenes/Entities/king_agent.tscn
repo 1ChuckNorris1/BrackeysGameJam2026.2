@@ -2,49 +2,133 @@
 
 [ext_resource type="Script" uid="uid://bgey433m5g3xl" path="res://Scripts/Entities/Agents/king_agent.gd" id="1_27ur3"]
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="2_plaf6"]
+[ext_resource type="Texture2D" uid="uid://cv61364qbes5k" path="res://assets/aseprite/NPCsDieAnimation.png" id="3_plaf6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
-radius = 7.540537
-height = 25.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_plaf6"]
-atlas = ExtResource("2_plaf6")
-region = Rect2(0, 0, 18, 32)
+radius = 12.0
+height = 26.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ne00k"]
 atlas = ExtResource("2_plaf6")
-region = Rect2(160, 0, 18, 32)
+region = Rect2(0, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df8lv"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(160, 352, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ulfyr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_plaf6")
+"texture": SubResource("AtlasTexture_ne00k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ne00k")
+"texture": SubResource("AtlasTexture_df8lv")
 }],
 "loop": 1,
 "name": &"idle",
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmsum"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(160, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ihpb"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(320, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6qv2"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(480, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgvn3"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(640, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fw0u"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(800, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxwmw"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(960, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo3ib"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(1120, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc41x"]
+atlas = ExtResource("3_plaf6")
+region = Rect2(960, 464, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38e4k"]
+atlas = ExtResource("3_plaf6")
+region = Rect2(1120, 464, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpw4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmsum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ihpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6qv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgvn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fw0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxwmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo3ib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc41x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38e4k")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 10.0
+}]
+
 [node name="king_agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable", "King"]]
 position = Vector2(0, -32)
 scale = Vector2(2, 2)
 script = ExtResource("1_27ur3")
+base_speed = 125.0
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
-position = Vector2(-0.5, 8.5)
+position = Vector2(-0.5, 4.5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ulfyr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458 groups=["Damageable"]]
-position = Vector2(-2, -16)
+position = Vector2(13.5, -16)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ulfyr")
 animation = &"idle"
 frame_progress = 0.082740515
+
+[node name="DeathAnimation" type="AnimatedSprite2D" parent="." unique_id=1304059038]
+unique_name_in_owner = true
+position = Vector2(15, -18.5)
+scale = Vector2(2.1, 2.1)
+sprite_frames = SubResource("SpriteFrames_qpw4w")
+animation = &"die"
+frame = 8
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="DeathAnimation" to="." method="loose_level"]
