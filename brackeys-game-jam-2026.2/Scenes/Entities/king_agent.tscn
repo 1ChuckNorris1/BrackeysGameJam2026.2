@@ -107,6 +107,11 @@ position = Vector2(0, -32)
 scale = Vector2(2, 2)
 script = ExtResource("1_27ur3")
 base_speed = 125.0
+wackel_speed = null
+wackel_winkel = null
+sprung_hoehe = null
+wait_chance = null
+max_wait_time = null
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true

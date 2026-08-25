@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca4lboyrnmbkh" path="res://Scripts/UIScript/button_level_class.gd" id="1_0wxo3"]
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_d0kbu"]
+[ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="4_d0kbu"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="5_2wdfq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
@@ -40,6 +41,282 @@ expand_margin_top = 9.0
 expand_margin_right = 4.0
 expand_margin_bottom = 9.0
 
+[sub_resource type="Animation" id="Animation_n2k3j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ToMainMenuButton:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/MarginContainer:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/GridContainer:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/GridContainer/Castle_Level_Button:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/GridContainer/Castle2_Level_Button:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/GridContainer/Castle3_Level_Button:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/GridContainer/Market1_Level_Button:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer/GridContainer/Market2_Level_Button:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VBoxContainer/GridContainer/Market3_Level_Button:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2wdfq"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ToMainMenuButton:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/MarginContainer:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/GridContainer:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/GridContainer/Castle_Level_Button:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/GridContainer/Castle2_Level_Button:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/GridContainer/Castle3_Level_Button:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/GridContainer/Market1_Level_Button:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer/GridContainer/Market2_Level_Button:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VBoxContainer/GridContainer/Market3_Level_Button:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_03hl5"]
+_data = {
+&"RESET": SubResource("Animation_n2k3j"),
+&"open": SubResource("Animation_2wdfq")
+}
+
 [node name="LevelMenu" type="Control" unique_id=1805815168]
 layout_mode = 3
 anchors_preset = 15
@@ -66,6 +343,7 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=725368876]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -81,21 +359,25 @@ grow_vertical = 2
 theme_override_constants/separation = 24
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=824654265]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Level selection"
 label_settings = SubResource("LabelSettings_ulfyr")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1078385390]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/margin_top = -1
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=729436916]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/h_separation = 66
 theme_override_constants/v_separation = 36
 columns = 3
 
 [node name="Castle_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1022431057]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Castle1"
@@ -107,6 +389,7 @@ style_cleared = SubResource("StyleBoxFlat_0wxo3")
 scene_path = "uid://xrwf4wuhypeq"
 
 [node name="Castle2_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=782450946]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Castle2"
@@ -118,6 +401,7 @@ style_cleared = SubResource("StyleBoxFlat_0wxo3")
 scene_path = "uid://bprmnhbtfthft"
 
 [node name="Castle3_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=530862566]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Castle3"
@@ -128,6 +412,7 @@ style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
 
 [node name="Market1_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1521503361]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Market1"
@@ -138,6 +423,7 @@ style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
 
 [node name="Market2_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1780840203]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Market2"
@@ -148,6 +434,7 @@ style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
 
 [node name="Market3_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=759261908]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Market"
@@ -158,6 +445,7 @@ style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
 
 [node name="ToMainMenuButton" type="Button" parent="." unique_id=167996834]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -165,3 +453,7 @@ theme_override_font_sizes/font_size = 32
 text = "X"
 script = ExtResource("5_2wdfq")
 scene_path = "uid://5luhos24eh2i"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1247400140]
+libraries/ = SubResource("AnimationLibrary_03hl5")
+script = ExtResource("4_d0kbu")

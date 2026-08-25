@@ -28,7 +28,7 @@ func _on_controlled_area_body_entered(body: Node2D) -> void:
 
 func _on_murder_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("King"):
-		body.take_damage()
+		body.take_damage(false)
 
 func take_damage():
 	die()

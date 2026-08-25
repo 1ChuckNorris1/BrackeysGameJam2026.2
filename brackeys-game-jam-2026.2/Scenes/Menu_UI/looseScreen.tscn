@@ -1,10 +1,245 @@
 [gd_scene format=3 uid="uid://c53rl3w41neas"]
 
+[ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_0q4di"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="1_2q42x"]
+[ext_resource type="Script" uid="uid://chss0orifno72" path="res://Scripts/UIScript/death_cause_label.gd" id="1_gf61k"]
 [ext_resource type="Script" uid="uid://cq8qihx4pv5ho" path="res://Scripts/UIScript/quit_button.gd" id="3_rubmj"]
+[ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="5_rubmj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dm25u"]
 font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_0q4di"]
+font_size = 32
+font_color = Color(0.9019608, 0.28235295, 0.18039216, 1)
+
+[sub_resource type="Animation" id="Animation_dm25u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/DeathCauseLabel:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/MarginContainer:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/HBoxContainer:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/Levels_Button:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/MainMenu_Button:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/Quit_Button:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l5l3m"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/DeathCauseLabel:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/MarginContainer:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/HBoxContainer:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/Levels_Button:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/MainMenu_Button:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/Quit_Button:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6eg11"]
+_data = {
+&"RESET": SubResource("Animation_dm25u"),
+&"open": SubResource("Animation_l5l3m")
+}
 
 [node name="looseScreen" type="Control" unique_id=133625199]
 layout_mode = 3
@@ -14,7 +249,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1497631432]
+modulate = Color(0.06053035, 0.06053035, 0.060530342, 1)
+custom_minimum_size = Vector2(0, 453.07)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.43743896
+offset_top = -46.535004
+offset_right = 0.43737793
+offset_bottom = 46.535004
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_scale = Vector2(1.915, 1.915)
+texture = ExtResource("1_0q4di")
+expand_mode = 3
+stretch_mode = 4
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=858732494]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -27,29 +281,43 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 6
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1530254722]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "You lost"
 label_settings = SubResource("LabelSettings_dm25u")
 
+[node name="DeathCauseLabel" type="Label" parent="VBoxContainer" unique_id=2036054855]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "You lost"
+label_settings = SubResource("LabelSettings_0q4di")
+script = ExtResource("1_gf61k")
+
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2145659667]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/margin_top = -1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=420915890]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1550163191]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 30
 
 [node name="Levels_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1532948362]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Levels"
@@ -57,6 +325,7 @@ script = ExtResource("1_2q42x")
 scene_path = "uid://cs4ncfj4lpa1o"
 
 [node name="MainMenu_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1044584219]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Main Menu"
@@ -64,7 +333,12 @@ script = ExtResource("1_2q42x")
 scene_path = "uid://5luhos24eh2i"
 
 [node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1968640092]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Quit"
 script = ExtResource("3_rubmj")
+
+[node name="AnimationPlayerUI" type="AnimationPlayer" parent="." unique_id=51478687]
+libraries/ = SubResource("AnimationLibrary_6eg11")
+script = ExtResource("5_rubmj")

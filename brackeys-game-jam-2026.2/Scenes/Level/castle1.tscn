@@ -1118,8 +1118,9 @@ position = Vector2(341, 332)
 tile_map_layers = [NodePath("../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../Waypoints/KingsPath")
 
-[node name="Player" parent="Entities/NavigationRegion2D" unique_id=1244140961 instance=ExtResource("7_8fs42")]
+[node name="Player" parent="Entities/NavigationRegion2D" unique_id=1244140961 node_paths=PackedStringArray("tile_map_layers") instance=ExtResource("7_8fs42")]
 position = Vector2(405, 441)
+tile_map_layers = [NodePath("../../../Tilemaps/TileMapLayer")]
 
 [node name="Camera2D" type="Camera2D" parent="Entities/NavigationRegion2D/Player" unique_id=1717065124]
 zoom = Vector2(0.5, 0.5)

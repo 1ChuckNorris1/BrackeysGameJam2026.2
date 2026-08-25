@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://pa0pmy7ak2tn" path="res://Scripts/UIScript/settings_menu.gd" id="1_od2ni"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_w64k6"]
+[ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="3_w64k6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1cbk1"]
 font_size = 45
@@ -9,6 +10,522 @@ font_size = 45
 [sub_resource type="LabelSettings" id="LabelSettings_s8jgj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_br6hb"]
+
+[sub_resource type="Animation" id="Animation_v4cfq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ToMainMenuButton:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/GridContainer:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/GridContainer/SoundContainer:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer/SoundLabel:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer/MasterSlider:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer2:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer2/SoundLabel:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer2/MusicSlider:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer3:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer3/SoundLabel:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer3/SFXSlider:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("VBoxContainer/GridContainer/WindowContainer:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer/Label:self_modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer/ResolutionOption:self_modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer2:self_modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer2/Label:self_modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer2/FullscreenCheckbox:self_modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5d7vy"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ToMainMenuButton:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Label:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/GridContainer:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/GridContainer/SoundContainer:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer/SoundLabel:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer/MasterSlider:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer2:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer2/SoundLabel:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer2/MusicSlider:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer3:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer3/SoundLabel:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("VBoxContainer/GridContainer/SoundContainer/VBoxContainer3/SFXSlider:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("VBoxContainer/GridContainer/WindowContainer:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer/Label:self_modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer/ResolutionOption:self_modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer2:self_modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer2/Label:self_modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("VBoxContainer/GridContainer/WindowContainer/VBoxContainer2/FullscreenCheckbox:self_modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ue33w"]
+_data = {
+&"RESET": SubResource("Animation_v4cfq"),
+&"open": SubResource("Animation_5d7vy")
+}
 
 [node name="SettingsMenu" type="Control" unique_id=1805815168]
 layout_mode = 3
@@ -29,6 +546,7 @@ grow_vertical = 2
 color = Color(0.20877446, 0.050243165, 0.050243165, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=943692632]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -41,30 +559,36 @@ grow_horizontal = 2
 theme_override_constants/separation = 26
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1130948610]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Settings"
 label_settings = SubResource("LabelSettings_1cbk1")
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1563078294]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/h_separation = 91
 columns = 2
 
 [node name="SoundContainer" type="VBoxContainer" parent="VBoxContainer/GridContainer" unique_id=562427790]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/GridContainer/SoundContainer" unique_id=755099010]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 0
 
 [node name="SoundLabel" type="Label" parent="VBoxContainer/GridContainer/SoundContainer/VBoxContainer" unique_id=1049268467]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Sound:"
 label_settings = SubResource("LabelSettings_s8jgj")
 
 [node name="MasterSlider" type="HSlider" parent="VBoxContainer/GridContainer/SoundContainer/VBoxContainer" unique_id=648167067]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(155.14, 0)
 layout_mode = 2
 max_value = 1.0
@@ -72,66 +596,80 @@ step = 0.1
 value = 1.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/GridContainer/SoundContainer" unique_id=32440877]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 0
 
 [node name="SoundLabel" type="Label" parent="VBoxContainer/GridContainer/SoundContainer/VBoxContainer2" unique_id=1284223150]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Music:"
 label_settings = SubResource("LabelSettings_s8jgj")
 
 [node name="MusicSlider" type="HSlider" parent="VBoxContainer/GridContainer/SoundContainer/VBoxContainer2" unique_id=455213873]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.1
 value = 1.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/GridContainer/SoundContainer" unique_id=498275322]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 0
 
 [node name="SoundLabel" type="Label" parent="VBoxContainer/GridContainer/SoundContainer/VBoxContainer3" unique_id=1756870138]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "SFX:"
 label_settings = SubResource("LabelSettings_s8jgj")
 
 [node name="SFXSlider" type="HSlider" parent="VBoxContainer/GridContainer/SoundContainer/VBoxContainer3" unique_id=463254218]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.1
 value = 1.0
 
 [node name="WindowContainer" type="VBoxContainer" parent="VBoxContainer/GridContainer" unique_id=83659383]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/GridContainer/WindowContainer" unique_id=325957565]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="VBoxContainer/GridContainer/WindowContainer/VBoxContainer" unique_id=31058992]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Window Size:"
 label_settings = SubResource("LabelSettings_br6hb")
 
 [node name="ResolutionOption" type="OptionButton" parent="VBoxContainer/GridContainer/WindowContainer/VBoxContainer" unique_id=1430757189]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/GridContainer/WindowContainer" unique_id=1682088813]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/GridContainer/WindowContainer/VBoxContainer2" unique_id=1777144511]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="FullscreenCheckbox" type="CheckBox" parent="VBoxContainer/GridContainer/WindowContainer/VBoxContainer2" unique_id=236164804]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Fullscreen"
 
 [node name="ToMainMenuButton" type="Button" parent="." unique_id=1818799602]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -139,3 +677,7 @@ theme_override_font_sizes/font_size = 32
 text = "X"
 script = ExtResource("2_w64k6")
 scene_path = "uid://5luhos24eh2i"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=386721882]
+libraries/ = SubResource("AnimationLibrary_ue33w")
+script = ExtResource("3_w64k6")

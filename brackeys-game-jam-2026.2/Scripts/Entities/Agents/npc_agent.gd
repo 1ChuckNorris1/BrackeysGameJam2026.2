@@ -21,5 +21,6 @@ func prepare():
 
 func loose_level():
 	print("Game Over")
+	Global.save_death_cause(Global.death_cause.end_game_messages_you_killed_npc)
 	Gamemanager.loose_game()
 	queue_free()

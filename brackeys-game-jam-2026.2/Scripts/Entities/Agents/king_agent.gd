@@ -24,7 +24,12 @@ func win_level():
 	print("Victory!")
 	get_tree().current_scene.win_level()
 	
-func take_damage():
+func take_damage(player_attack: bool):
+	if player_attack:
+		Global.save_death_cause(Global.death_cause.end_game_messages_you_killed_king)
+	else:
+		Global.save_death_cause(Global.death_cause.end_game_messages_murderer_killed_king)
+		
 	die()
 
 func die(): 

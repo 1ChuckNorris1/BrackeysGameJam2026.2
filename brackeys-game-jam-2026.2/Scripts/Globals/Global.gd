@@ -9,9 +9,45 @@ var cleared_levels: Array[String] = []
 var unlocked_levels: Array[String] = ["Castle1"]
 const SAVE_PATH = "user://savegame.cfg"
 
+
+enum death_cause {
+	end_game_messages_you_killed_king,
+	end_game_messages_murderer_killed_king,
+	end_game_messages_you_killed_npc
+}
+var end_game_messages_you_killed_king: Dictionary = {
+		"1": "You had one job...",
+		"2": "Wrong Target, Bodyguard!",
+		"3": "OORS, Wrong Royal..."
+}
+var end_game_messages_murderer_killed_king: Dictionary = {
+		"1": "The crown has fallen!",
+		"2": "Protection Failure",
+		"3": "The king is dead. Long live ... wait."
+}
+var end_game_messages_you_killed_npc: Dictionary = {
+		"1": "MASSACRE!",
+		"2": "Collateral Damage",
+		"3": "Paranoia in the line of duty"
+}
+var last_death_cause: death_cause = death_cause.end_game_messages_you_killed_king
+
 func _ready() -> void:
 	reset_costumes()
 	load_game()
+
+func save_death_cause(cause: death_cause) -> void:
+	last_death_cause = cause
+
+func get_random_death_message() -> String:
+	match last_death_cause:
+		death_cause.end_game_messages_you_killed_king:
+			return end_game_messages_you_killed_king.values().pick_random()
+		death_cause.end_game_messages_murderer_killed_king:
+			return end_game_messages_murderer_killed_king.values().pick_random()
+		death_cause.end_game_messages_you_killed_npc:
+			return end_game_messages_you_killed_npc.values().pick_random()
+	return ""
 
 func reset_costumes():
 	enemy_costumes.clear()

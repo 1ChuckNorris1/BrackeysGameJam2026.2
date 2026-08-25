@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ct6278s1fw2j" path="res://Scripts/Entities/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://assets/Sprites/Player/Player.png" id="1_xhfnw"]
 [ext_resource type="PackedScene" uid="uid://d3lgqv6al8fof" path="res://Scenes/Components/damage_component.tscn" id="4_5ixxa"]
+[ext_resource type="PackedScene" uid="uid://ximwursx10rv" path="res://Scenes/Components/movement_particles_component.tscn" id="4_dewec"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
 atlas = ExtResource("1_xhfnw")
@@ -457,5 +458,9 @@ shape = SubResource("RectangleShape2D_ulfyr")
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=903664765]
 position = Vector2(0, 19)
 radius = 14.55
+
+[node name="MovementParticlesComponent" parent="." unique_id=2100393624 instance=ExtResource("4_dewec")]
+unique_name_in_owner = true
+position = Vector2(0, -5)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
