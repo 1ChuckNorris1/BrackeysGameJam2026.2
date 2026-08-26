@@ -1125,7 +1125,8 @@ tile_map_layers = [NodePath("../../../Tilemaps/TileMapLayer")]
 [node name="Camera2D" type="Camera2D" parent="Entities/NavigationRegion2D/Player" unique_id=1717065124]
 zoom = Vector2(0.5, 0.5)
 limit_left = -3100
-limit_top = -2100
+limit_top = -3100
+limit_right = 3700
 limit_bottom = 2100
 
 [node name="NPCs" type="Node" parent="Entities/NavigationRegion2D" unique_id=1411983738]
@@ -1166,42 +1167,42 @@ tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc1")
 
 [node name="NPC_Agent8" parent="Entities/NavigationRegion2D/NPCs" unique_id=447809628 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(-321, -800)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="NPC_Agent9" parent="Entities/NavigationRegion2D/NPCs" unique_id=294495500 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(-1175, -760)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="NPC_Agent10" parent="Entities/NavigationRegion2D/NPCs" unique_id=1051967462 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(871, -728)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="NPC_Agent11" parent="Entities/NavigationRegion2D/NPCs" unique_id=1343377654 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(47, -1072)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="NPC_Agent12" parent="Entities/NavigationRegion2D/NPCs" unique_id=1541672758 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(-212, -1307)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="NPC_Agent13" parent="Entities/NavigationRegion2D/NPCs" unique_id=1098783758 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(384, -1219)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="NPC_Agent14" parent="Entities/NavigationRegion2D/NPCs" unique_id=1993182826 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(616, -645)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="NPC_Agent15" parent="Entities/NavigationRegion2D/NPCs" unique_id=1335061104 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("6_bowh1")]
-position = Vector2(-135, -932.0001)
+position = Vector2(712, -1005)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
@@ -1273,12 +1274,12 @@ tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc3")
 
 [node name="enemy2" parent="Entities/NavigationRegion2D/Murderers" unique_id=1226799900 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(-555, -1159.0001)
+position = Vector2(-919, -1293)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="enemy3" parent="Entities/NavigationRegion2D/Murderers" unique_id=243145087 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(-369, -596.0001)
+position = Vector2(-457, -473)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc1")
 
