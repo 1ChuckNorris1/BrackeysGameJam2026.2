@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca4lboyrnmbkh" path="res://Scripts/UIScript/button_level_class.gd" id="1_0wxo3"]
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_d0kbu"]
+[ext_resource type="Script" uid="uid://ppirirpfnqrd" path="res://Scripts/UIScript/main_menu.gd" id="1_n2k3j"]
 [ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="4_d0kbu"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="5_2wdfq"]
 
@@ -324,6 +325,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_n2k3j")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=677949422]
 custom_minimum_size = Vector2(0, 453.07)
