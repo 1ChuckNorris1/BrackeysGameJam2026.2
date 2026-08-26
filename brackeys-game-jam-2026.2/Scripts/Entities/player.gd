@@ -8,7 +8,7 @@ const SPEED = 300.0
 @onready var animated_sprite: AnimatedSprite2D = $"AnimatedSprite2D"
 @onready var attack_stream_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var damage_component: Area2D = $Damage_component
-@onready var movement_particles_component: Node2D = %MovementParticlesComponent
+
 
 @onready var schritte_player: AudioStreamPlayer = $Schritte
 @export var schritte1: AudioStreamWAV
@@ -25,18 +25,12 @@ var damage = 1
 var is_dead: bool = false
 
 func _ready() -> void:
-	movement_particles_component.tile_map_layers = tile_map_layers
 	# init hitbox offset
 	damage_component_offset = damage_component.position
 	play_schritte()
 	
 
-func _process(_delta: float) -> void:
-	if is_moving:
-		movement_particles_component.start_particles()
-	else:
-		movement_particles_component.stop_particles()
-		
+
 
 func _physics_process(_delta: float) -> void:
 	

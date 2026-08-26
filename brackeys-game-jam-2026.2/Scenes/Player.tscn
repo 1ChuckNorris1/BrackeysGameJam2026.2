@@ -5,7 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://dd8t8372wpgxn" path="res://assets/Sounds/SFX/schritte1.wav" id="2_52ee3"]
 [ext_resource type="AudioStream" uid="uid://c0c0qmlwegfg1" path="res://assets/Sounds/SFX/schritte2.wav" id="3_bhhdu"]
 [ext_resource type="PackedScene" uid="uid://d3lgqv6al8fof" path="res://Scenes/Components/damage_component.tscn" id="4_5ixxa"]
-[ext_resource type="PackedScene" uid="uid://ximwursx10rv" path="res://Scenes/Components/movement_particles_component.tscn" id="4_dewec"]
 [ext_resource type="AudioStream" uid="uid://cg147xlt1qgql" path="res://assets/Sounds/SFX/schritte3.wav" id="4_megsn"]
 [ext_resource type="Texture2D" uid="uid://cm7v4tcwl5bnq" path="res://assets/Sprites/Player/character_sprite_sheet.png" id="6_bhhdu"]
 
@@ -208,10 +207,8 @@ schritte3 = ExtResource("4_megsn")
 position = Vector2(1, -17)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_83tgy")
-animation = &"attack_down"
+animation = &"run_right"
 autoplay = "idle_down"
-frame = 2
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634772725]
 position = Vector2(-1, 12)
@@ -231,10 +228,6 @@ shape = SubResource("RectangleShape2D_ulfyr")
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=903664765]
 position = Vector2(0, 19)
 radius = 14.55
-
-[node name="MovementParticlesComponent" parent="." unique_id=2100393624 instance=ExtResource("4_dewec")]
-unique_name_in_owner = true
-position = Vector2(0, 27)
 
 [node name="Schritte" type="AudioStreamPlayer" parent="." unique_id=962680412]
 volume_db = -10.0
