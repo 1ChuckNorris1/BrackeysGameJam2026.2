@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_0q4di"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="1_2q42x"]
 [ext_resource type="Script" uid="uid://chss0orifno72" path="res://Scripts/UIScript/death_cause_label.gd" id="1_gf61k"]
-[ext_resource type="Script" uid="uid://cq8qihx4pv5ho" path="res://Scripts/UIScript/quit_button.gd" id="3_rubmj"]
 [ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="5_rubmj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dm25u"]
@@ -111,18 +110,6 @@ tracks/7/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/Quit_Button:self_modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_l5l3m"]
 resource_name = "open"
@@ -217,18 +204,6 @@ tracks/7/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/MainMenu_But
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("VBoxContainer/HBoxContainer/VBoxContainer/Quit_Button:self_modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -331,13 +306,6 @@ theme_override_font_sizes/font_size = 38
 text = "Main Menu"
 script = ExtResource("1_2q42x")
 scene_path = "uid://5luhos24eh2i"
-
-[node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1968640092]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 38
-text = "Quit"
-script = ExtResource("3_rubmj")
 
 [node name="AnimationPlayerUI" type="AnimationPlayer" parent="." unique_id=51478687]
 libraries/ = SubResource("AnimationLibrary_6eg11")
