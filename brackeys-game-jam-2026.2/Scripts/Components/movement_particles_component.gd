@@ -8,7 +8,7 @@ extends Node2D
 const COLOR_GRAS = Color("2d9334")
 const COLOR_ERDE = Color("bf7958")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_handle_ground_particles()
 	
 func start_particles() -> void:

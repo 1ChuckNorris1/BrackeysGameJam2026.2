@@ -3,6 +3,8 @@ extends Agent
 @onready var die_sound: AudioStreamPlayer = $DieSound
 @onready var death_animation: AnimatedSprite2D = %DeathAnimation
 
+
+
 func take_damage():
 	die()
 
@@ -15,9 +17,9 @@ func die():
 func prepare():
 	if Global.free_costumes.size() > 0:
 		var costume_num = Global.free_costumes.pick_random()
-		print("Chose this costume:", costume_num)
+	#	print("Chose this costume:", costume_num)
 		Global.free_costumes.erase(costume_num)
-		print(Global.free_costumes)
+	#	print(Global.free_costumes)
 		animated_sprite_2d.play(str(costume_num))
 	else: 
 		animated_sprite_2d.play("1")

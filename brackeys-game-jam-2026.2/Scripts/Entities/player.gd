@@ -10,6 +10,12 @@ const SPEED = 300.0
 @onready var damage_component: Area2D = $Damage_component
 @onready var movement_particles_component: Node2D = %MovementParticlesComponent
 
+@onready var schritte_player: AudioStreamPlayer = $Schritte
+@export var schritte1: AudioStreamWAV
+@export var schritte2: AudioStreamWAV
+@export var schritte3: AudioStreamWAV
+var schritte_indx: int = 1
+
 var is_moving: bool = false
 
 var damage_component_offset: Vector2
@@ -22,6 +28,8 @@ func _ready() -> void:
 	movement_particles_component.tile_map_layers = tile_map_layers
 	# init hitbox offset
 	damage_component_offset = damage_component.position
+	play_schritte()
+	
 
 func _process(_delta: float) -> void:
 	if is_moving:
@@ -40,6 +48,7 @@ func _physics_process(_delta: float) -> void:
 		return
 	
 	process_movement()
+	play_sound()
 	process_animation()
 	move_and_slide()
 
@@ -91,6 +100,14 @@ func play_animation(prefix: String, dir: Vector2):
 		animated_sprite.play(prefix + "_down")
 		damage_component.position = Vector2(-y,x)
 
+func play_sound():
+	
+	if is_moving && schritte_player.playing == false:
+
+			
+		play_schritte()
+	elif !is_moving && schritte_player.playing == true:
+		schritte_player.stop()
 #-----------------------------------------------------------------------------------
 #  ATTACKING
 #-----------------------------------------------------------------------------------
@@ -108,3 +125,18 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		damage_component.get_child(0).disabled = true
 	elif is_dead:
 		queue_free()
+
+
+func play_schritte():
+	if schritte_indx % 3 == 0:
+		var random_pitch = randf_range(1.25,1.35)
+		schritte_player.pitch_scale = random_pitch
+		
+	schritte_player.stream = get(str("schritte", (schritte_indx % 3 + 1)))
+	schritte_player.play()	
+	schritte_indx += 1
+
+
+	
+func _on_schritte_finished() -> void:
+	play_schritte()

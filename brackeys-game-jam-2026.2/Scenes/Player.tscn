@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ct6278s1fw2j" path="res://Scripts/Entities/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cd6161gssh2si" path="res://assets/Sprites/Player/Player.png" id="1_xhfnw"]
+[ext_resource type="AudioStream" uid="uid://dd8t8372wpgxn" path="res://assets/Sounds/SFX/schritte1.wav" id="2_52ee3"]
+[ext_resource type="AudioStream" uid="uid://c0c0qmlwegfg1" path="res://assets/Sounds/SFX/schritte2.wav" id="3_bhhdu"]
 [ext_resource type="PackedScene" uid="uid://d3lgqv6al8fof" path="res://Scenes/Components/damage_component.tscn" id="4_5ixxa"]
 [ext_resource type="PackedScene" uid="uid://ximwursx10rv" path="res://Scenes/Components/movement_particles_component.tscn" id="4_dewec"]
+[ext_resource type="AudioStream" uid="uid://cg147xlt1qgql" path="res://assets/Sounds/SFX/schritte3.wav" id="4_megsn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
 atlas = ExtResource("1_xhfnw")
@@ -434,6 +437,9 @@ position = Vector2(0, -37)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_kyqiw")
+schritte1 = ExtResource("2_52ee3")
+schritte2 = ExtResource("3_bhhdu")
+schritte3 = ExtResource("4_megsn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1722575374]
 scale = Vector2(4, 4)
@@ -464,4 +470,8 @@ radius = 14.55
 unique_name_in_owner = true
 position = Vector2(0, -5)
 
+[node name="Schritte" type="AudioStreamPlayer" parent="." unique_id=962680412]
+volume_db = -10.0
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="finished" from="Schritte" to="." method="_on_schritte_finished"]
