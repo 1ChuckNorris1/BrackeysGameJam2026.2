@@ -5,3 +5,4 @@
 [node name="MenuMusic" type="AudioStreamPlayer" unique_id=1110401496]
 stream = ExtResource("1_yq8ps")
 autoplay = true
+bus = &"Music"
