@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bxy83kfv20rtr"]
+
+[ext_resource type="Script" uid="uid://ca0dhw6pq5l4o" path="res://Scripts/UIScript/studio_logo.gd" id="1_pi3e7"]
+[ext_resource type="Texture2D" uid="uid://dnkjeaw7l5dxa" path="res://assets/Menu/eventuellesStudioLogo?.jpg" id="2_evb1b"]
+
+[sub_resource type="Animation" id="Animation_e4n3v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.14044744, 0.14044744, 0.14044744, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_viwac"]
+resource_name = "open"
+length = 1.805
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.805),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.14044744, 0.14044744, 0.14044744, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a68k0"]
+_data = {
+&"RESET": SubResource("Animation_e4n3v"),
+&"open": SubResource("Animation_viwac")
+}
+
+[node name="StudioLogo" type="CanvasLayer" unique_id=795211569]
+script = ExtResource("1_pi3e7")
+main_menu = "uid://5luhos24eh2i"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1499151534]
+modulate = Color(0.14044744, 0.14044744, 0.14044744, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_evb1b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1157280166]
+libraries/ = SubResource("AnimationLibrary_a68k0")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
