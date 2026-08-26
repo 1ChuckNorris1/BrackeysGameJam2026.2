@@ -7,6 +7,7 @@ var target_to_follow: Node2D = null
 @onready var death_animation: AnimatedSprite2D = %DeathAnimation
 @onready var die_sound: AudioStreamPlayer = $DieSound
 
+
 func prepare():
 	if Global.free_costumes.size() > 0:
 		var costume_num = Global.free_costumes.pick_random()

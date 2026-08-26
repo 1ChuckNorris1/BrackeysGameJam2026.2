@@ -103,6 +103,8 @@ animations = [{
 [node name="king_agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable", "King"]]
 position = Vector2(0, -32)
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_27ur3")
 base_speed = 125.0
 

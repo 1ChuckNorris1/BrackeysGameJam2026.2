@@ -733,6 +733,8 @@ animations = [{
 [node name="NPC_Agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable"]]
 position = Vector2(1, -32)
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_s3psu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
