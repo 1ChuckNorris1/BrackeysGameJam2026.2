@@ -1,6 +1,9 @@
 extends Agent
 
 
+@onready var die_sound: AudioStreamPlayer = $DieSound
+
+
 func prepare():
 	animated_sprite_2d.play("idle")
 
@@ -34,11 +37,16 @@ func take_damage(player_attack: bool):
 
 func die(): 
 	is_waiting = true
-	die_animation.visible = true
-	die_animation.play("die")
-	animated_sprite_2d.queue_free()
+	die_sound.playing = true
+	animated_sprite_2d.play("die")
+	
 	
 func loose_level():
 	print("Game Over")
 	Gamemanager.loose_game()
 	queue_free()
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	
+	loose_level()

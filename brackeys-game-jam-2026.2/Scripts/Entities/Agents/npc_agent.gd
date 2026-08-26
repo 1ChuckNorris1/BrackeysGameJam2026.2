@@ -1,13 +1,16 @@
 extends Agent
 
+@onready var die_sound: AudioStreamPlayer = $DieSound
+@onready var death_animation: AnimatedSprite2D = %DeathAnimation
 
 func take_damage():
 	die()
 
 func die():
 	is_waiting = true
-	die_animation.visible = true
-	die_animation.play("die")
+	death_animation.visible = true
+	die_sound.playing = true
+	death_animation.play("die")
 	
 func prepare():
 	if Global.free_costumes.size() > 0:

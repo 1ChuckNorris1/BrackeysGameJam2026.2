@@ -6,6 +6,7 @@ extends Node2D
 
 func _ready() -> void:
 	get_tree().paused = true
+	MenuMusic.playing = false
 	
 	
 func _on_button_pressed() -> void:

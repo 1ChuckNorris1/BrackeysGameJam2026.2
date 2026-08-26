@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var die_animation: AnimatedSprite2D = %DeathAnimation
 @onready var movement_particles: Node2D = %MovementParticlesComponent
 
 @export var tile_map_layers: Array[TileMapLayer]
@@ -33,7 +32,6 @@ var is_chasing: bool = false
 
 func _ready():
 	movement_particles.tile_map_layers = tile_map_layers
-	die_animation.visible = false
 	speed = base_speed
 	for waypoint in waypoint_container.get_children():
 		if waypoint is Marker2D:

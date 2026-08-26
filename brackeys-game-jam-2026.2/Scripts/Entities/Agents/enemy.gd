@@ -1,9 +1,11 @@
 extends Agent
 
 
-@export var attack_speed = 400.0
+@export var attack_speed = 300.0
 var target_to_follow: Node2D = null
 
+@onready var death_animation: AnimatedSprite2D = %DeathAnimation
+@onready var die_sound: AudioStreamPlayer = $DieSound
 
 func prepare():
 	if Global.free_costumes.size() > 0:
@@ -38,8 +40,9 @@ func take_damage():
 func die():
 	is_waiting = true
 	is_chasing = false
-	die_animation.visible = true
-	die_animation.play("die")
+	death_animation.visible = true
+	die_sound.playing = true
+	death_animation.play("die")
 	
 func delete_self():
 	call_deferred("queue_free")

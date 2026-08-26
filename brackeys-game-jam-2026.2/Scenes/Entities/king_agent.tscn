@@ -4,32 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="2_plaf6"]
 [ext_resource type="Texture2D" uid="uid://cv61364qbes5k" path="res://assets/aseprite/NPCsDieAnimation.png" id="3_plaf6"]
 [ext_resource type="PackedScene" uid="uid://ximwursx10rv" path="res://Scenes/Components/movement_particles_component.tscn" id="4_ne00k"]
+[ext_resource type="AudioStream" uid="uid://cutcgjn6hanid" path="res://assets/Sounds/SFX/deathkoenig.wav" id="5_df8lv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
 radius = 12.0
 height = 26.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ne00k"]
-atlas = ExtResource("2_plaf6")
-region = Rect2(0, 352, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_df8lv"]
-atlas = ExtResource("2_plaf6")
-region = Rect2(160, 352, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ulfyr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ne00k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_df8lv")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wmsum"]
 atlas = ExtResource("2_plaf6")
@@ -67,7 +46,15 @@ region = Rect2(960, 464, 32, 32)
 atlas = ExtResource("3_plaf6")
 region = Rect2(1120, 464, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qpw4w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne00k"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(0, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df8lv"]
+atlas = ExtResource("2_plaf6")
+region = Rect2(160, 352, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulfyr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -100,6 +87,17 @@ animations = [{
 "loop": 0,
 "name": &"die",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne00k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df8lv")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
 }]
 
 [node name="king_agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable", "King"]]
@@ -107,11 +105,6 @@ position = Vector2(0, -32)
 scale = Vector2(2, 2)
 script = ExtResource("1_27ur3")
 base_speed = 125.0
-wackel_speed = null
-wackel_winkel = null
-sprung_hoehe = null
-wait_chance = null
-max_wait_time = null
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true
@@ -122,22 +115,16 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ulfyr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458 groups=["Damageable"]]
+z_index = 5
 position = Vector2(13.5, -16)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ulfyr")
-animation = &"idle"
-frame_progress = 0.082740515
-
-[node name="DeathAnimation" type="AnimatedSprite2D" parent="." unique_id=1304059038]
-unique_name_in_owner = true
-position = Vector2(15, -18.5)
-scale = Vector2(2.1, 2.1)
-sprite_frames = SubResource("SpriteFrames_qpw4w")
 animation = &"die"
-frame = 8
-frame_progress = 1.0
 
 [node name="MovementParticlesComponent" parent="." unique_id=2100393624 instance=ExtResource("4_ne00k")]
 unique_name_in_owner = true
 
-[connection signal="animation_finished" from="DeathAnimation" to="." method="loose_level"]
+[node name="DieSound" type="AudioStreamPlayer" parent="." unique_id=1766507394]
+stream = ExtResource("5_df8lv")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
