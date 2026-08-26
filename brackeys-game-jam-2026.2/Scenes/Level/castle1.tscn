@@ -1124,6 +1124,9 @@ tile_map_layers = [NodePath("../../../Tilemaps/TileMapLayer")]
 
 [node name="Camera2D" type="Camera2D" parent="Entities/NavigationRegion2D/Player" unique_id=1717065124]
 zoom = Vector2(0.5, 0.5)
+limit_left = -3100
+limit_top = -2100
+limit_bottom = 2100
 
 [node name="NPCs" type="Node" parent="Entities/NavigationRegion2D" unique_id=1411983738]
 
