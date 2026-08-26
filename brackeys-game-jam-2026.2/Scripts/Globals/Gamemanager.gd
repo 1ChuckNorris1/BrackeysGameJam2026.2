@@ -23,6 +23,7 @@ func screen_shake(strength: float = 10.0, decay: float = 15.0) -> void:
 	shake_decay = decay
 
 func loose_game():
+	
 	Global.reset_costumes()
 	get_tree().change_scene_to_packed(LOOSE_SCREEN)
 	
