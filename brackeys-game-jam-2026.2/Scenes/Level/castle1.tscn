@@ -904,6 +904,10 @@ vertices = PackedVector2Array(2560.75, 1321.0625, -1485.8438, 1342.9297, -1074.0
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-1497, 1353, 2573, 1331, 1792, -2478, -1083, -2442)])
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ldvkj"]
+normal = Vector2(-1, 0)
+distance = -2.0
+
 [node name="Level1" type="Node2D" unique_id=2102359895]
 script = ExtResource("1_fynpg")
 level_name = "Castle1"
@@ -1110,8 +1114,28 @@ position = Vector2(-153.98227, -1120.7965)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Entities" unique_id=737811832]
 y_sort_enabled = true
-position = Vector2(-147, -202)
+position = Vector2(-551, -678)
 navigation_polygon = SubResource("NavigationPolygon_akeww")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Entities/NavigationRegion2D" unique_id=2096029960]
+position = Vector2(551, 678)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entities/NavigationRegion2D/StaticBody2D" unique_id=1038970175]
+position = Vector2(0, 2100)
+shape = SubResource("WorldBoundaryShape2D_ldvkj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Entities/NavigationRegion2D/StaticBody2D" unique_id=678105131]
+position = Vector2(0, 2100)
+shape = SubResource("WorldBoundaryShape2D_ldvkj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Entities/NavigationRegion2D/StaticBody2D" unique_id=330813685]
+position = Vector2(0, -3100)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_ldvkj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Entities/NavigationRegion2D/StaticBody2D" unique_id=922723467]
+position = Vector2(3700, 0)
+shape = SubResource("WorldBoundaryShape2D_ldvkj")
 
 [node name="king_agent" parent="Entities/NavigationRegion2D" unique_id=1024896108 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("4_rhkcd")]
 position = Vector2(341, 332)
@@ -1120,6 +1144,7 @@ waypoint_container = NodePath("../../../Waypoints/KingsPath")
 
 [node name="Player" parent="Entities/NavigationRegion2D" unique_id=1244140961 node_paths=PackedStringArray("tile_map_layers") instance=ExtResource("7_8fs42")]
 position = Vector2(405, 441)
+collision_mask = 1
 tile_map_layers = [NodePath("../../../Tilemaps/TileMapLayer")]
 
 [node name="Camera2D" type="Camera2D" parent="Entities/NavigationRegion2D/Player" unique_id=1717065124]
@@ -1269,17 +1294,17 @@ waypoint_container = NodePath("../../../../Waypoints/Npc3")
 [node name="Murderers" type="Node" parent="Entities/NavigationRegion2D" unique_id=1396188495]
 
 [node name="enemy" parent="Entities/NavigationRegion2D/Murderers" unique_id=1430953937 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(-71, -2015)
+position = Vector2(552, -2772)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc3")
 
 [node name="enemy2" parent="Entities/NavigationRegion2D/Murderers" unique_id=1226799900 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(-919, -1293)
+position = Vector2(-1754, -296)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc2")
 
 [node name="enemy3" parent="Entities/NavigationRegion2D/Murderers" unique_id=243145087 node_paths=PackedStringArray("tile_map_layers", "waypoint_container") instance=ExtResource("5_qcwdr")]
-position = Vector2(-457, -473)
+position = Vector2(-1438, -1244)
 tile_map_layers = [NodePath("../../../../Tilemaps/TileMapLayer")]
 waypoint_container = NodePath("../../../../Waypoints/Npc1")
 
