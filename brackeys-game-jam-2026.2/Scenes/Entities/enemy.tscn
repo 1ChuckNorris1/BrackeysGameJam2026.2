@@ -774,17 +774,20 @@ offset = Vector2(18.8, 0)
 
 [node name="DeathAnimation" type="AnimatedSprite2D" parent="." unique_id=349507686]
 unique_name_in_owner = true
-z_index = 1
-position = Vector2(6.000001, -9.5)
+z_index = 6
+position = Vector2(1.999999, -9.5)
 scale = Vector2(2.1, 2.1)
 sprite_frames = SubResource("SpriteFrames_on283")
 animation = &"die"
+frame = 7
+frame_progress = 1.0
 
 [node name="MovementParticlesComponent" parent="." unique_id=2100393624 instance=ExtResource("4_ygq1y")]
 unique_name_in_owner = true
 
 [node name="DieSound" type="AudioStreamPlayer" parent="." unique_id=2078157408]
 stream = ExtResource("5_tx8ge")
+bus = &"SFX"
 
 [connection signal="body_entered" from="ControlledArea" to="." method="_on_controlled_area_body_entered"]
 [connection signal="body_entered" from="MurderArea" to="." method="_on_murder_area_body_entered"]

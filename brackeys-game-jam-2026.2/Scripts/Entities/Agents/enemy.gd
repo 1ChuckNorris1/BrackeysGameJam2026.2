@@ -33,6 +33,7 @@ func _on_murder_area_body_entered(body: Node2D) -> void:
 		body.take_damage(false)
 
 func take_damage():
+	Global.statistics["Murderer Deaths"] += 1
 	die()
 
 

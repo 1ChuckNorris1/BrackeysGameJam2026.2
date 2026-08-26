@@ -1,5 +1,5 @@
 extends Control
 
 func _ready() -> void:
-	if MenuMusic.playing == false:
-		MenuMusic.playing = true
+	if MenuMusic.is_playing_music == false:
+		MenuMusic.start_music()

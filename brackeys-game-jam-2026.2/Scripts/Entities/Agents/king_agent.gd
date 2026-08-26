@@ -36,6 +36,7 @@ func take_damage(player_attack: bool):
 	die()
 
 func die(): 
+	Gamemanager.screen_shake(15, 15)
 	is_waiting = true
 	die_sound.playing = true
 	animated_sprite_2d.play("die")

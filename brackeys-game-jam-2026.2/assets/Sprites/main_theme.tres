@@ -156,6 +156,72 @@ expand_margin_top = 9.0
 expand_margin_right = 4.0
 expand_margin_bottom = 9.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_popyy"]
+bg_color = Color(0.3372549, 0.2509804, 0.39215687, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5la7o"]
+bg_color = Color(0.3372549, 0.2509804, 0.39215687, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxy4l"]
+bg_color = Color(0.3372549, 0.2509804, 0.39215687, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8h62"]
+bg_color = Color(0.22352941, 0.48235294, 0.26666668, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhb4v"]
+bg_color = Color(0.23529412, 0.34901962, 0.3372549, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5m88h"]
+bg_color = Color(0.1882353, 0.17254902, 0.18039216, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
 [resource]
 default_font = ExtResource("1_d4d7b")
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -186,3 +252,9 @@ HSlider/styles/grabber_area = SubResource("StyleBoxFlat_d4d7b")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_cu5ps")
 HSlider/styles/slider = SubResource("StyleBoxFlat_ld1gq")
 Label/colors/font_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+TabContainer/styles/panel = SubResource("StyleBoxFlat_popyy")
+TabContainer/styles/tab_disabled = SubResource("StyleBoxFlat_5la7o")
+TabContainer/styles/tab_focus = SubResource("StyleBoxFlat_sxy4l")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_g8h62")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_jhb4v")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_5m88h")
