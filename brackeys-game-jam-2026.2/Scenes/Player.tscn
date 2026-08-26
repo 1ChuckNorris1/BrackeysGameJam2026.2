@@ -443,7 +443,7 @@ schritte3 = ExtResource("4_megsn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1722575374]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_83tgy")
-animation = &"dying"
+animation = &"idle_down"
 autoplay = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634772725]
