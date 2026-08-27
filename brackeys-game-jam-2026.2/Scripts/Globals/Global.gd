@@ -5,7 +5,7 @@ var free_costumes: Array[int]
 var enemy_costumes: Array[int]
 var all_costumes: Array[int]
 
-var all_levels: Array[String] = ["RoyalWalk", "MarketDay","Festival", "Market1", "Market2", "Market3"]
+var all_levels: Array[String] = ["RoyalWalk", "MarketDay","Festival", "Overcrowded", "HugeFestival", "PureChaos"]
 var cleared_levels: Array[String] = []
 var unlocked_levels: Array[String] = ["RoyalWalk"]
 const SAVE_PATH = "user://savegame.cfg"
