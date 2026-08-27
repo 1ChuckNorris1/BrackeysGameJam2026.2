@@ -743,6 +743,7 @@ scale = Vector2(2, 2)
 collision_layer = 6
 collision_mask = 6
 script = ExtResource("1_o6kgl")
+attack_speed = 500.0
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true

@@ -19,4 +19,5 @@ func _change_to_next_scene():
 	print("changing scene")
 	if scene_path.contains("Castle") or scene_path.contains("Market"):
 			MenuMusic.stop()
+	if scene_path == null: return
 	get_tree().change_scene_to_file(scene_path)

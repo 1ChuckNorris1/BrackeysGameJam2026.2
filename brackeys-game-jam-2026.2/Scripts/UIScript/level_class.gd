@@ -1,7 +1,7 @@
 class_name LevelClass
 extends Node2D
 
-@onready var quit_button: Button = %QuitButton
+
 @onready var wanted_sign: CanvasLayer = %WantedSign
 @onready var screen_end_level: CanvasLayer = %Screen_end_level
 
