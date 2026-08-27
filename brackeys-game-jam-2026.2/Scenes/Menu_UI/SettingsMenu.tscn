@@ -21,6 +21,11 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_oqc04"]
+
 [sub_resource type="Animation" id="Animation_v4cfq"]
 length = 0.001
 tracks/0/type = "value"
@@ -1232,18 +1237,19 @@ label_settings = SubResource("LabelSettings_1cbk1")
 
 [node name="TabContainer" type="TabContainer" parent="VBoxContainer" unique_id=654794650]
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(321.235, 133.355)
+custom_minimum_size = Vector2(397.965, 133.355)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/tab_separation = 15
 tab_alignment = 1
-current_tab = 1
+current_tab = 5
 tab_0/title = "Sound"
 tab_1/title = "Window"
 tab_2/title = "Keybinds"
 tab_3/title = "Stats"
 tab_4/title = "Reset"
+tab_5/title = "Credits"
 
 [node name="SoundContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=562427790]
 visible = false
@@ -1329,6 +1335,7 @@ value = 1.0
 script = ExtResource("2_v4cfq")
 
 [node name="WindowContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=83659383]
+visible = false
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
@@ -1438,6 +1445,74 @@ offset_transform_position = Vector2(0, 7.62)
 theme_override_styles/fill = SubResource("StyleBoxFlat_ldwxi")
 value = 50.0
 show_percentage = false
+
+[node name="CreditsContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=1411405466]
+layout_mode = 2
+metadata/_tab_index = 5
+metadata/_tab_name = "Credits"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TabContainer/CreditsContainer" unique_id=880888098]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/CreditsContainer" unique_id=209413264]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer" unique_id=953638213]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer" unique_id=2017854647]
+layout_mode = 2
+text = "Annika"
+label_settings = SubResource("LabelSettings_ulfyr")
+
+[node name="Label2" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer" unique_id=1561357323]
+layout_mode = 2
+text = "Art"
+label_settings = SubResource("LabelSettings_oqc04")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer" unique_id=1810600747]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer2" unique_id=1526905600]
+layout_mode = 2
+text = "Felix"
+label_settings = SubResource("LabelSettings_ulfyr")
+
+[node name="Label2" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer2" unique_id=233605551]
+layout_mode = 2
+text = "Sound"
+label_settings = SubResource("LabelSettings_oqc04")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer" unique_id=1851211412]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer3" unique_id=1198731713]
+layout_mode = 2
+text = "Tobias"
+label_settings = SubResource("LabelSettings_ulfyr")
+
+[node name="Label2" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer3" unique_id=1011311255]
+layout_mode = 2
+text = "Programming
+Level Design"
+label_settings = SubResource("LabelSettings_oqc04")
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer" unique_id=156619043]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer4" unique_id=463792183]
+layout_mode = 2
+text = "Simon"
+label_settings = SubResource("LabelSettings_ulfyr")
+
+[node name="Label2" type="Label" parent="VBoxContainer/TabContainer/CreditsContainer/HBoxContainer/VBoxContainer4" unique_id=638332478]
+layout_mode = 2
+text = "Game Idea
+Programming
+Level Design"
+label_settings = SubResource("LabelSettings_oqc04")
 
 [node name="ToMainMenuButton" type="Button" parent="." unique_id=1818799602]
 modulate = Color(1, 1, 1, 0)
