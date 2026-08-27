@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfys1q7wjueic"]
 
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_mnqso"]
+[ext_resource type="Script" uid="uid://lg5akwa7n74t" path="res://Scripts/UIScript/victory_screen.gd" id="1_ncpl2"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="1_ovn80"]
 [ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="3_mnqso"]
 
@@ -246,6 +247,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ncpl2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=712071990]
 modulate = Color(0.427493, 0.42749307, 0.42749307, 1)

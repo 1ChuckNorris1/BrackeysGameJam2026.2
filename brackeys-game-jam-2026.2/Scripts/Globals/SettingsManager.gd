@@ -126,3 +126,19 @@ func _update_bus_volume(bus_name: String, linear_value: float) -> void:
 	if bus_index != -1:
 		AudioServer.set_bus_volume_db(bus_index, linear_to_db(linear_value))
 		AudioServer.set_bus_mute(bus_index, linear_value <= 0.0001)
+
+func reset_settings() -> void:
+	settings = {
+		"fullscreen": false,
+		"resolution": Vector2i(1920, 1080),
+		"master_volume": 0.6,
+		"music_volume": 0.6,
+		"sfx_volume": 0.6,
+		"keybindings": {}
+	}
+
+	_fetch_default_keybindings()
+	
+
+	apply_settings()
+	save_settings()

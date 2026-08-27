@@ -7,7 +7,7 @@ var target_to_follow: Node2D = null
 @onready var die_sound: AudioStreamPlayer = $DieSound
 
 var target_update_timer: float = 0.0
-
+var rand_costum_num: int = 1
 func prepare():
 	if Global.free_costumes.size() > 0:
 		if Global.enemy_costumes.size() < Global.all_costumes.size() / 2:
@@ -15,11 +15,14 @@ func prepare():
 			Global.free_costumes.erase(costume_num)
 			animated_sprite_2d.play(str(costume_num))
 			Global.enemy_costumes.append(costume_num)
+			rand_costum_num = costume_num
 		else:
 			var costume_num = Global.enemy_costumes.pick_random()
 			animated_sprite_2d.play(str(costume_num))
+			rand_costum_num = costume_num
 	else: 
 		animated_sprite_2d.play("1")
+		rand_costum_num = 1
 
 func abilities():
 	if is_chasing and is_instance_valid(target_to_follow):
@@ -48,6 +51,7 @@ func _on_nav_finished():
 
 func take_damage():
 	Global.statistics["Murderer Deaths"] += 1
+	Global.enemy_costumes.erase(rand_costum_num)
 	die()
 
 func die():

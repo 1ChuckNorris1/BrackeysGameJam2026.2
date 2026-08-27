@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://db5cdr434544v"]
 
 [ext_resource type="Script" uid="uid://pa0pmy7ak2tn" path="res://Scripts/UIScript/settings_menu.gd" id="1_od2ni"]
+[ext_resource type="Texture2D" uid="uid://qjtkeq0yby27" path="res://assets/Menu/bg_settings.png" id="2_5d7vy"]
 [ext_resource type="Script" uid="uid://bwuu6djhvkyne" path="res://Scripts/UIScript/slider_class.gd" id="2_v4cfq"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_w64k6"]
 [ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="3_w64k6"]
@@ -1185,7 +1186,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_od2ni")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1815698539]
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1870521330]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -1193,7 +1194,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.20877446, 0.050243165, 0.050243165, 1)
+texture = ExtResource("2_5d7vy")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=943692632]
 modulate = Color(1, 1, 1, 0)
@@ -1221,17 +1224,18 @@ label_settings = SubResource("LabelSettings_1cbk1")
 
 [node name="TabContainer" type="TabContainer" parent="VBoxContainer" unique_id=654794650]
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(300.93, 133.355)
+custom_minimum_size = Vector2(321.235, 133.355)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/tab_separation = 15
 tab_alignment = 1
-current_tab = 3
+current_tab = 4
 tab_0/title = "Sound"
 tab_1/title = "Window"
 tab_2/title = "Keybinds"
 tab_3/title = "Stats"
+tab_4/title = "Reset"
 
 [node name="SoundContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=562427790]
 visible = false
@@ -1385,6 +1389,7 @@ layout_mode = 2
 theme_override_constants/separation = 22
 
 [node name="StatsContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=1710491262]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 metadata/_tab_name = "Stats"
@@ -1396,6 +1401,25 @@ theme_override_constants/margin_top = 15
 [node name="StatsContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/StatsContainer" unique_id=2129845093]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="ResetContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=1664701042]
+layout_mode = 2
+metadata/_tab_index = 4
+metadata/_tab_name = "Reset"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TabContainer/ResetContainer" unique_id=1407941523]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+
+[node name="Button" type="Button" parent="VBoxContainer/TabContainer/ResetContainer" unique_id=2131259938]
+layout_mode = 2
+text = "Reset"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TabContainer/ResetContainer/Button" unique_id=2072755216]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 21.0
+show_percentage = false
 
 [node name="ToMainMenuButton" type="Button" parent="." unique_id=1818799602]
 modulate = Color(1, 1, 1, 0)
@@ -1411,3 +1435,5 @@ scene_path = "uid://5luhos24eh2i"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=386721882]
 libraries/ = SubResource("AnimationLibrary_ue33w")
 script = ExtResource("3_w64k6")
+
+[connection signal="pressed" from="VBoxContainer/TabContainer/ResetContainer/Button" to="." method="reset_game_progress"]

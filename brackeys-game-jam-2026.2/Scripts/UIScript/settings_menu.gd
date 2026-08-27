@@ -192,3 +192,10 @@ func _cancel_rebinding() -> void:
 		rebind_button_reference.text = _get_key_name(action_to_rebind, slot_to_rebind)
 	action_to_rebind = ""
 	rebind_button_reference = null
+
+func reset_game_progress() -> void:
+	Global.reset()
+	SettingsManager.reset_settings()
+	_load_ui_states()
+	_generate_keybind_ui()
+	_generate_stats_ui()

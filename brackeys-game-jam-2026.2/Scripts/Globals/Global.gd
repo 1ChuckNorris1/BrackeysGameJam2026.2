@@ -90,6 +90,12 @@ func reset():
 	reset_costumes()
 	cleared_levels.clear()
 	unlocked_levels = ["RoyalWalk"]
+	statistics = {
+	"Royal Deaths": 0,
+	"Innocent Deaths": 0,
+	"Murderer Deaths": 0,
+	"Minutes played" : 0
+}
 	save_game()
 	
 func save_game() -> void:
