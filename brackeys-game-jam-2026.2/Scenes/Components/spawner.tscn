@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddqteqf2atold"]
+
+[ext_resource type="Script" uid="uid://ddnesqe2jq8ji" path="res://Scripts/Components/spawner.gd" id="1_qsp2c"]
+[ext_resource type="PackedScene" uid="uid://bgr5a751j8033" path="res://Scenes/Entities/enemy.tscn" id="2_j8ki3"]
+[ext_resource type="PackedScene" uid="uid://bd2d512dvfjvb" path="res://Scenes/Entities/npc_agent.tscn" id="3_vnn1l"]
+
+[node name="Spawner" type="Node2D" unique_id=2018548102]
+script = ExtResource("1_qsp2c")
+enemy_scene = ExtResource("2_j8ki3")
+npc_scene = ExtResource("3_vnn1l")
