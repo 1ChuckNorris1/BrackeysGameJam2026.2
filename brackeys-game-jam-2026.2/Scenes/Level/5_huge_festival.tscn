@@ -264,7 +264,7 @@ sources/0 = SubResource("TileSetAtlasSource_2hbqx")
 
 [node name="5HugeFestival" type="Node2D" unique_id=1168723390]
 script = ExtResource("1_te1fa")
-level_name = "Festival"
+level_name = "HugeFestival"
 
 [node name="WantedSign" parent="." unique_id=2086477416 instance=ExtResource("2_ck3dh")]
 unique_name_in_owner = true
