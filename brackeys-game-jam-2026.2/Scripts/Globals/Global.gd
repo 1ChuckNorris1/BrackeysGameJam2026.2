@@ -140,4 +140,8 @@ func win_level(level: String) -> bool:
 	
 	save_game()
 	return false
+	
+func unlock_all_levels():
+	for level in all_levels:
+		win_level(level)
 		

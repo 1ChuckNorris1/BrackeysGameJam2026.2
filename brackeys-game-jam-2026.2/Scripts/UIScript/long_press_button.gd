@@ -34,6 +34,11 @@ func _physics_process(delta: float) -> void:
 			released = true
 			long_released.emit()
 			
+			#Debug
+			
+			Global.unlock_all_levels()
+			
+			
 	elif not released:
 		if duration_pressed > 0.0:
 			duration_pressed = 0.0
