@@ -6,6 +6,7 @@ extends HBoxContainer
 func _ready() -> void:
 	await get_tree().physics_frame
 	await NavigationServer2D.map_changed
+	await get_tree().create_timer(0.2).timeout
 	await get_tree().process_frame
 	for enemy in Global.enemy_costumes:
 		show_image(enemy)
