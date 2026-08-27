@@ -805,6 +805,7 @@ label_settings = SubResource("LabelSettings_fyu2r")
 [node name="QuitButton" type="Button" parent="." unique_id=1658162496]
 unique_name_in_owner = true
 process_mode = 3
+modulate = Color(1, 1, 1, 0.9647059)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -859,7 +860,5 @@ scale = Vector2(2.855, 2.855)
 sprite_frames = SubResource("SpriteFrames_f58i8")
 animation = &"1"
 offset = Vector2(18.8, 0)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=632414281]
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
