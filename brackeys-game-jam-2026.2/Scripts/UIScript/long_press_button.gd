@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 			
 			#Debug
 			
-			Global.unlock_all_levels()
+			#Global.unlock_all_levels()
 			
 			
 	elif not released:
