@@ -262,9 +262,9 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_2hbqx")
 
-[node name="3Festival" type="Node2D" unique_id=1168723390]
+[node name="5HugeFestival" type="Node2D" unique_id=1168723390]
 script = ExtResource("1_te1fa")
-level_name = "Festival"
+level_name = "HugeFestival"
 
 [node name="WantedSign" parent="." unique_id=2086477416 instance=ExtResource("2_ck3dh")]
 unique_name_in_owner = true
