@@ -3,8 +3,16 @@
 [ext_resource type="Script" uid="uid://ca4lboyrnmbkh" path="res://Scripts/UIScript/button_level_class.gd" id="1_0wxo3"]
 [ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_d0kbu"]
 [ext_resource type="Script" uid="uid://ppirirpfnqrd" path="res://Scripts/UIScript/main_menu.gd" id="1_n2k3j"]
+[ext_resource type="Shader" uid="uid://cg11m3kgf8krk" path="res://assets/shaders/LevelMenu.gdshader" id="3_2wdfq"]
 [ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="4_d0kbu"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="5_2wdfq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ulfyr"]
+shader = ExtResource("3_2wdfq")
+shader_parameter/lod = 3.90000018525
+shader_parameter/modulate = Color(0.42365062, 0.42365065, 0.42365062, 0.3019608)
+shader_parameter/corner_radius = 0.1200000057
+shader_parameter/aspect_ratio = 3.884
 
 [sub_resource type="LabelSettings" id="LabelSettings_ulfyr"]
 font_size = 70
@@ -333,16 +341,31 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -0.43740845
-offset_top = -46.535004
-offset_right = 0.43737793
-offset_bottom = 46.535004
+offset_top = -76.0
+offset_right = 0.8748169
+offset_bottom = 17.070007
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_scale = Vector2(1.915, 1.915)
 texture = ExtResource("1_d0kbu")
 expand_mode = 3
 stretch_mode = 4
+
+[node name="BlurBackground" type="ColorRect" parent="." unique_id=171899986]
+material = SubResource("ShaderMaterial_ulfyr")
+custom_minimum_size = Vector2(597.75, 70.005)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -48.0
+offset_right = 298.75
+offset_bottom = 105.905
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=725368876]
 self_modulate = Color(1, 1, 1, 0)
@@ -352,10 +375,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -286.0
+offset_top = -137.0
+offset_right = 288.0
+offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 24
