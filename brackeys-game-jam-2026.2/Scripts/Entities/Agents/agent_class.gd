@@ -111,7 +111,12 @@ func _on_nav_finished():
 		var wait_time = randf_range(0, max_wait_time)
 		await get_tree().create_timer(wait_time).timeout
 		is_waiting = false
-	var new_position = select_next_waypoint().global_position
+	var new_position = select_next_waypoint().global_position 
+	var random_vec = Vector2(
+		randf_range(0, 30), 
+		randf_range(0, 30)  
+	)
+	new_position += random_vec
 	make_path(new_position)
 	
 func _on_navigation_agent_2d_velocity_computed(safe_velocity):
