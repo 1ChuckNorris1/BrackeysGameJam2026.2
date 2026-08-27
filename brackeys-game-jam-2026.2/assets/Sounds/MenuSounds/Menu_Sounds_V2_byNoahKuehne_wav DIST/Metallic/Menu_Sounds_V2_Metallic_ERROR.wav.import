@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dagfdeduyikeu"
+path="res://.godot/imported/Menu_Sounds_V2_Metallic_ERROR.wav-600d5f8e2245e88100f734e558d2f9f9.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/MenuSounds/Menu_Sounds_V2_byNoahKuehne_wav DIST/Metallic/Menu_Sounds_V2_Metallic_ERROR.wav"
+dest_files=["res://.godot/imported/Menu_Sounds_V2_Metallic_ERROR.wav-600d5f8e2245e88100f734e558d2f9f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

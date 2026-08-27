@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddn1ygqfrh82n"
+path="res://.godot/imported/TEXT_SOUND_LETTER_SHORT.wav-1a9435251fc6c707396c73692c39a6d7.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/MenuSounds/Menu_Sounds_V2_byNoahKuehne_wav DIST/Text_Input_Sounds/TEXT_SOUND_LETTER_SHORT.wav"
+dest_files=["res://.godot/imported/TEXT_SOUND_LETTER_SHORT.wav-1a9435251fc6c707396c73692c39a6d7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

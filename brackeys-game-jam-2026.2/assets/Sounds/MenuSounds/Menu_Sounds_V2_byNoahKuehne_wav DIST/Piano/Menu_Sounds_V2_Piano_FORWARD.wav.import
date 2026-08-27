@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bg5xslvtw6y13"
+path="res://.godot/imported/Menu_Sounds_V2_Piano_FORWARD.wav-053509863b16954f932e10b8284a37b4.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/MenuSounds/Menu_Sounds_V2_byNoahKuehne_wav DIST/Piano/Menu_Sounds_V2_Piano_FORWARD.wav"
+dest_files=["res://.godot/imported/Menu_Sounds_V2_Piano_FORWARD.wav-053509863b16954f932e10b8284a37b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

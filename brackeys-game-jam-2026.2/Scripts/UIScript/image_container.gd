@@ -4,6 +4,7 @@ extends HBoxContainer
 @onready var image_container: Control = $Image
 
 func _ready() -> void:
+	await NavigationServer2D.map_changed
 	await get_tree().process_frame
 	for enemy in Global.enemy_costumes:
 		show_image(enemy)

@@ -40,6 +40,7 @@ func apply_settings() -> void:
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_size(settings.resolution)
+		@warning_ignore("integer_division")
 		var screen_center = DisplayServer.screen_get_position() + (DisplayServer.screen_get_size() / 2)
 		var window_position = screen_center - (settings.resolution / 2)
 		DisplayServer.window_set_position(window_position)

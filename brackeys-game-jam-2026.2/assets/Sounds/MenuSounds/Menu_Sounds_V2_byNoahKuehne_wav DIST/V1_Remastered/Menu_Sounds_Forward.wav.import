@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hvdp6vb3dr7w"
+path="res://.godot/imported/Menu_Sounds_Forward.wav-62e8328b84f0c09cf830269c0d967390.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/MenuSounds/Menu_Sounds_V2_byNoahKuehne_wav DIST/V1_Remastered/Menu_Sounds_Forward.wav"
+dest_files=["res://.godot/imported/Menu_Sounds_Forward.wav-62e8328b84f0c09cf830269c0d967390.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

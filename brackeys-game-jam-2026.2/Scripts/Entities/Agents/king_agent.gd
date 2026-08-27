@@ -43,7 +43,6 @@ func die():
 	
 	
 func loose_level():
-	print("Game Over")
 	Gamemanager.loose_game()
 	queue_free()
 

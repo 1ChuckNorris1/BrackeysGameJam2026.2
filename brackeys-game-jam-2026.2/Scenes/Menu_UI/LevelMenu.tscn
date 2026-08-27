@@ -10,7 +10,7 @@
 font_size = 70
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyo02"]
-bg_color = Color(0.6627451, 0.23137255, 0.23137255, 0.5882353)
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -21,7 +21,7 @@ expand_margin_right = 4.0
 expand_margin_bottom = 9.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2p8p"]
-bg_color = Color(0.95686275, 0.49411765, 0.105882354, 0.5882353)
+bg_color = Color(0.95686275, 0.49411765, 0.105882354, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -32,7 +32,7 @@ expand_margin_right = 4.0
 expand_margin_bottom = 9.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wxo3"]
-bg_color = Color(0.44313726, 0.6666667, 0.20392157, 0.5882353)
+bg_color = Color(0.44313726, 0.6666667, 0.20392157, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -388,7 +388,7 @@ level_name = "Castle1"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-scene_path = "uid://xrwf4wuhypeq"
+scene_path = "uid://dvt6ioq6g3cnw"
 
 [node name="Castle2_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=782450946]
 self_modulate = Color(1, 1, 1, 0)

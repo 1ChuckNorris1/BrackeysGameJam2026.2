@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bd2d512dvfjvb" path="res://Scenes/Entities/npc_agent.tscn" id="6_bowh1"]
 [ext_resource type="PackedScene" uid="uid://d1yaaq5gi4l0q" path="res://Scenes/Player.tscn" id="7_8fs42"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhkcd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rdpnq"]
 texture = ExtResource("2_ps0fx")
 texture_region_size = Vector2i(34, 34)
 0:0/0 = 0
@@ -207,7 +207,7 @@ terrain_set_0/terrain_1/name = "Path"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 custom_data_layer_0/name = "costum_data_layer"
 custom_data_layer_0/type = 4
-sources/0 = SubResource("TileSetAtlasSource_rhkcd")
+sources/0 = SubResource("TileSetAtlasSource_rdpnq")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rdpnq"]
 

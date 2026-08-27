@@ -25,6 +25,7 @@ Global="*uid://bh7g0lfq84w0f"
 Gamemanager="*uid://drdoxca8h8my6"
 SettingsManager="*uid://dp8w6rfmgvh36"
 MenuMusic="*uid://cvbi43mmw8hn5"
+SoundeffectsManager="*uid://ymtme0ca4qah"
 
 [display]
 

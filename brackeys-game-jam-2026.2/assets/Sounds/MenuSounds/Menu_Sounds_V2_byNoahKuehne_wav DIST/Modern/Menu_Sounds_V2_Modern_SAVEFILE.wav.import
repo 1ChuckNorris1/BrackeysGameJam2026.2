@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://coi6se6wxt0gr"
+path="res://.godot/imported/Menu_Sounds_V2_Modern_SAVEFILE.wav-6ddfd5e67f8892b420d475e95265e559.sample"
+
+[deps]
+
+source_file="res://assets/Sounds/MenuSounds/Menu_Sounds_V2_byNoahKuehne_wav DIST/Modern/Menu_Sounds_V2_Modern_SAVEFILE.wav"
+dest_files=["res://.godot/imported/Menu_Sounds_V2_Modern_SAVEFILE.wav-6ddfd5e67f8892b420d475e95265e559.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

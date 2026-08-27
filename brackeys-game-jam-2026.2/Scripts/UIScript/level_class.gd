@@ -1,11 +1,14 @@
 class_name LevelClass
 extends Node2D
 
-@onready var canvas_layer: CanvasLayer = $WantedSign
-@export var level_name:String = "Level"
+@onready var quit_button: Button = %QuitButton
+
+@onready var canvas_layer: CanvasLayer = %WantedSign
+@export var level_name:String = "Castle1"
 
 func _ready() -> void:
 	get_tree().paused = true
+	quit_button.pressed.connect(_on_button_pressed)
 	MenuMusic.stop_music()
 	
 	
