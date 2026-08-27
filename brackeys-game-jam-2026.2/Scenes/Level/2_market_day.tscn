@@ -309,8 +309,8 @@ enemy_scene = ExtResource("7_awfoa")
 npc_scene = ExtResource("8_ilw02")
 entities_container = NodePath("../Entities/EntitiesContainer")
 waypoint_container = NodePath("../WaypointsNPCs")
-num_of_enemies = 1
-num_of_npcs = 60
+num_of_enemies = 2
+num_of_npcs = 70
 king = NodePath("../Entities/EntitiesContainer/king_agent")
 
 [node name="Entities" type="Node2D" parent="." unique_id=208438064]
