@@ -787,25 +787,15 @@ animations = [{
 [node name="WantedSign" type="CanvasLayer" unique_id=2086477416]
 script = ExtResource("1_tw6vp")
 
-[node name="WantedSignPaper" type="TextureRect" parent="." unique_id=643937794]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -320.0
-offset_top = 677.0
-offset_right = -210.80737
-offset_bottom = 1272.8887
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -1.5707964
-scale = Vector2(1.345, 1.345)
+[node name="WantedSignPaper" type="Sprite2D" parent="." unique_id=209430478]
+position = Vector2(317, 196)
+rotation = -1.4573499
+scale = Vector2(0.375, 0.375)
 texture = ExtResource("2_10463")
-expand_mode = 1
-stretch_mode = 5
 
 [node name="Label" type="Label" parent="." unique_id=2147218784]
-offset_left = 203.00002
-offset_top = 34.000004
+offset_left = 203.0
+offset_top = 34.0
 offset_right = 396.0
 offset_bottom = 89.0
 rotation = 0.09050125
@@ -820,10 +810,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -54.0
+offset_left = -59.5
 offset_top = 84.0
-offset_right = 54.0
-offset_bottom = 132.0
+offset_right = 59.5
+offset_bottom = 131.99963
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
@@ -849,11 +839,10 @@ anchor_bottom = 0.5
 offset_left = -37.0
 offset_top = -8.0
 offset_right = 38.0
-offset_bottom = 8.0
+offset_bottom = 7.9999847
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
-offset_transform_position = Vector2(9.715, 0)
 alignment = 1
 script = ExtResource("2_2n7hv")
 
