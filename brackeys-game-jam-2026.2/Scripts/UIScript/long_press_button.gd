@@ -33,7 +33,6 @@ func _physics_process(delta: float) -> void:
 		if duration_pressed >= duration_treshhold:
 			released = true
 			long_released.emit()
-			get_tree().current_scene.win_level()
 			
 	elif not released:
 		if duration_pressed > 0.0:

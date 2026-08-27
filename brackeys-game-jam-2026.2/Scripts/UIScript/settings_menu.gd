@@ -2,6 +2,7 @@ extends Control
 
 @onready var fullscreen_check: CheckBox = %FullscreenCheckbox
 @onready var resolution_option: OptionButton = %ResolutionOption
+@onready var button_reset: Button = $VBoxContainer/TabContainer/ResetContainer/Button
 
 @onready var master_slider: HSlider = %MasterSlider
 @onready var music_slider: HSlider = %MusicSlider
@@ -21,6 +22,7 @@ const RESOLUTIONS: Array[Vector2i] = [
 ]
 
 func _ready() -> void:
+	button_reset.long_released.connect(reset_game_progress)
 	_populate_resolution_options()
 	_load_ui_states()
 	_connect_signals()

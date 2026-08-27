@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bwuu6djhvkyne" path="res://Scripts/UIScript/slider_class.gd" id="2_v4cfq"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_w64k6"]
 [ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="3_w64k6"]
+[ext_resource type="Script" uid="uid://ctnnepu2agc0x" path="res://Scripts/UIScript/long_press_button.gd" id="4_ue33w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1cbk1"]
 font_size = 45
@@ -12,6 +13,13 @@ font_size = 45
 [sub_resource type="LabelSettings" id="LabelSettings_s8jgj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_br6hb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldwxi"]
+bg_color = Color(0.95686275, 0.49411765, 0.105882354, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="Animation" id="Animation_v4cfq"]
 length = 0.001
@@ -1414,11 +1422,21 @@ theme_override_constants/margin_top = 15
 [node name="Button" type="Button" parent="VBoxContainer/TabContainer/ResetContainer" unique_id=2131259938]
 layout_mode = 2
 text = "Reset"
+script = ExtResource("4_ue33w")
 
 [node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TabContainer/ResetContainer/Button" unique_id=2072755216]
-layout_mode = 0
-offset_right = 4.0
-offset_bottom = 21.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 7.62)
+theme_override_styles/fill = SubResource("StyleBoxFlat_ldwxi")
+value = 50.0
 show_percentage = false
 
 [node name="ToMainMenuButton" type="Button" parent="." unique_id=1818799602]
@@ -1435,5 +1453,3 @@ scene_path = "uid://5luhos24eh2i"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=386721882]
 libraries/ = SubResource("AnimationLibrary_ue33w")
 script = ExtResource("3_w64k6")
-
-[connection signal="pressed" from="VBoxContainer/TabContainer/ResetContainer/Button" to="." method="reset_game_progress"]
