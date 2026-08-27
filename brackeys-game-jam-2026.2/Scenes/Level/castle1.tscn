@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://7erot6xo2xhq" path="res://Scripts/UIScript/image_container.gd" id="2_rdpnq"]
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="3_ps0fx"]
 [ext_resource type="PackedScene" uid="uid://bttllmbvomi8j" path="res://Scenes/Entities/king_agent.tscn" id="4_rhkcd"]
+[ext_resource type="PackedScene" uid="uid://ddqteqf2atold" path="res://Scenes/Components/spawner.tscn" id="5_ps0fx"]
 [ext_resource type="PackedScene" uid="uid://bgr5a751j8033" path="res://Scenes/Entities/enemy.tscn" id="5_qcwdr"]
 [ext_resource type="PackedScene" uid="uid://bd2d512dvfjvb" path="res://Scenes/Entities/npc_agent.tscn" id="6_bowh1"]
 [ext_resource type="PackedScene" uid="uid://d1yaaq5gi4l0q" path="res://Scenes/Player.tscn" id="7_8fs42"]
@@ -1100,6 +1101,14 @@ position = Vector2(-279.20358, -852.21246)
 position = Vector2(-153.98227, -1120.7965)
 
 [node name="Entities" type="Node" parent="." unique_id=392897318]
+
+[node name="Spawner" parent="Entities" unique_id=2018548102 node_paths=PackedStringArray("waypoints1", "waypoints2", "waypoints3", "king") instance=ExtResource("5_ps0fx")]
+waypoints1 = NodePath("../../Waypoints/Npc1")
+waypoints2 = NodePath("../../Waypoints/Npc2")
+waypoints3 = NodePath("../../Waypoints/Npc3")
+num_of_enemies = 40
+num_of_npcs = 40
+king = NodePath("../NavigationRegion2D/king_agent")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Entities" unique_id=737811832]
 y_sort_enabled = true
