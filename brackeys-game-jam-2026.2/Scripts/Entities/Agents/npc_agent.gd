@@ -27,7 +27,7 @@ func prepare():
 	var allowed_costumes = Global.all_costumes.filter(
 		func(c): return c not in Global.enemy_costumes
 		)
-
+	print("Allowed costumes:", allowed_costumes)
 	if not allowed_costumes.is_empty():
 		var costume_num = allowed_costumes.pick_random()
 		animated_sprite_2d.play(str(costume_num))
