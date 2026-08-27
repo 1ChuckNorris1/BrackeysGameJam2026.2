@@ -17,6 +17,8 @@ func die():
 	
 func prepare():
 	await get_tree().process_frame
+	nav_agent.avoidance_priority = 0.2 + rand_costum_number/ 100 + randf_range(0.001, 0.009)
+	
 	if Global.free_costumes.size() > 0:
 		var costume_num = Global.free_costumes.pick_random()
 		Global.free_costumes.erase(costume_num)
@@ -35,7 +37,7 @@ func prepare():
 		animated_sprite_2d.play("1")
 		rand_costum_number = 1
 	
-	nav_agent.avoidance_priority = 0.2 + rand_costum_number/ 100 + randf_range(0.001, 0.009)
+	
 	
 
 
