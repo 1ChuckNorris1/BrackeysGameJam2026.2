@@ -2,11 +2,113 @@
 
 [ext_resource type="Script" uid="uid://d4g5au31j8nd4" path="res://Scripts/UIScript/wanted_sign.gd" id="1_tw6vp"]
 [ext_resource type="Script" uid="uid://7erot6xo2xhq" path="res://Scripts/UIScript/image_container.gd" id="2_2n7hv"]
+[ext_resource type="Texture2D" uid="uid://d1wj6a4dnwcg0" path="res://assets/Menu/wanted_sign_paper.png" id="2_10463"]
 [ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="3_10463"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fyu2r"]
 font_size = 54
 font_color = Color(0.1882353, 0.17254902, 0.18039216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5hy5"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bise2"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1707"]
+bg_color = Color(0.95686275, 0.49411765, 0.105882354, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mnb1"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fa65q"]
+bg_color = Color(0.9019608, 0.28235295, 0.18039216, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p0tq"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2lrp"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmb5g"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mykaq"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0x1i7"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwe13"]
+bg_color = Color(0.6627451, 0.23137255, 0.23137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 9.0
+expand_margin_right = 4.0
+expand_margin_bottom = 9.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejxrc"]
 bg_color = Color(1, 1, 1, 1)
@@ -685,13 +787,21 @@ animations = [{
 [node name="WantedSign" type="CanvasLayer" unique_id=2086477416]
 script = ExtResource("1_tw6vp")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1474929627]
+[node name="WantedSignPaper" type="TextureRect" parent="." unique_id=643937794]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = 677.0
+offset_right = -210.80737
+offset_bottom = 1272.8887
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.8117647, 0.7764706, 0.72156864, 1)
+rotation = -1.5707964
+scale = Vector2(1.345, 1.345)
+texture = ExtResource("2_10463")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="." unique_id=2147218784]
 offset_left = 203.00002
@@ -716,8 +826,19 @@ offset_right = 54.0
 offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 47
-text = "PLAY"
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_v5hy5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_bise2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x1707")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_1mnb1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fa65q")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_1p0tq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_h2lrp")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_hmb5g")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mykaq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_0x1i7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lwe13")
+text = "Lets go"
 
 [node name="ImageContainer" type="HBoxContainer" parent="." unique_id=833983506]
 anchors_preset = 8
