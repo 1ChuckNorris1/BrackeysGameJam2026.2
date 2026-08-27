@@ -381,42 +381,43 @@ columns = 3
 [node name="Castle_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1022431057]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 38
-text = "Castle1"
+theme_override_font_sizes/font_size = 28
+text = "Royal Walk"
 script = ExtResource("1_0wxo3")
-level_name = "Castle1"
+level_name = "RoyalWalk"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-scene_path = "uid://dvt6ioq6g3cnw"
+scene_path = "uid://bsowmglxnlk3n"
 
 [node name="Castle2_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=782450946]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 38
-text = "Castle2"
+theme_override_font_sizes/font_size = 28
+text = "Market Day"
 script = ExtResource("1_0wxo3")
-level_name = "Castle2"
+level_name = "MarketDay"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
-scene_path = "uid://bprmnhbtfthft"
+scene_path = "uid://bl8nxhkoldfki"
 
 [node name="Castle3_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=530862566]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 38
-text = "Castle3"
+theme_override_font_sizes/font_size = 28
+text = "Festival"
 script = ExtResource("1_0wxo3")
-level_name = "Castle3"
+level_name = "Festival"
 style_locked = SubResource("StyleBoxFlat_tyo02")
 style_unlocked = SubResource("StyleBoxFlat_l2p8p")
 style_cleared = SubResource("StyleBoxFlat_0wxo3")
+scene_path = "uid://451kqh7shwxp"
 
 [node name="Market1_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1521503361]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 38
+theme_override_font_sizes/font_size = 28
 text = "Market1"
 script = ExtResource("1_0wxo3")
 level_name = "Market1"
@@ -427,7 +428,7 @@ style_cleared = SubResource("StyleBoxFlat_0wxo3")
 [node name="Market2_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=1780840203]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 38
+theme_override_font_sizes/font_size = 28
 text = "Market2"
 script = ExtResource("1_0wxo3")
 level_name = "Market2"
@@ -438,7 +439,7 @@ style_cleared = SubResource("StyleBoxFlat_0wxo3")
 [node name="Market3_Level_Button" type="Button" parent="VBoxContainer/GridContainer" unique_id=759261908]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 38
+theme_override_font_sizes/font_size = 28
 text = "Market"
 script = ExtResource("1_0wxo3")
 level_name = "Market3"

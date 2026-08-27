@@ -9,10 +9,12 @@ extends Node2D
 func _ready() -> void:
 	get_tree().paused = true
 	quit_button.pressed.connect(_on_button_pressed)
-	MenuMusic.stop_music()
+	SoundeffectsManager.play_sound(SoundeffectsManager.wanted_sign_sound)
+	
 	
 	
 func _on_button_pressed() -> void:
+	MenuMusic.start_in_game_music()
 	get_tree().paused = false
 	canvas_layer.queue_free()
 

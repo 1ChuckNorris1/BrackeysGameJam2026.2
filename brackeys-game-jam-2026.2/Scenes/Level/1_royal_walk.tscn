@@ -1,15 +1,15 @@
-[gd_scene format=4 uid="uid://dvt6ioq6g3cnw"]
+[gd_scene format=4 uid="uid://bsowmglxnlk3n"]
 
-[ext_resource type="Script" uid="uid://diky37bysudrq" path="res://Scripts/UIScript/level_class.gd" id="1_d6u6w"]
-[ext_resource type="Script" uid="uid://7erot6xo2xhq" path="res://Scripts/UIScript/image_container.gd" id="2_xh17d"]
-[ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="3_2hbqx"]
-[ext_resource type="Texture2D" uid="uid://b1ohpucefps8v" path="res://assets/aseprite/tilemap_new.png" id="4_rkj68"]
-[ext_resource type="Script" uid="uid://ddnesqe2jq8ji" path="res://Scripts/Components/spawner.gd" id="5_s1m8f"]
-[ext_resource type="Texture2D" uid="uid://cdih63ti238u4" path="res://assets/Sprites/sprites_market.png" id="5_xh17d"]
-[ext_resource type="PackedScene" uid="uid://bgr5a751j8033" path="res://Scenes/Entities/enemy.tscn" id="6_nhcin"]
-[ext_resource type="PackedScene" uid="uid://bd2d512dvfjvb" path="res://Scenes/Entities/npc_agent.tscn" id="7_8nc3b"]
-[ext_resource type="PackedScene" uid="uid://bttllmbvomi8j" path="res://Scenes/Entities/king_agent.tscn" id="8_35tj7"]
-[ext_resource type="PackedScene" uid="uid://d1yaaq5gi4l0q" path="res://Scenes/Player.tscn" id="9_226rs"]
+[ext_resource type="Script" uid="uid://diky37bysudrq" path="res://Scripts/UIScript/level_class.gd" id="1_2ke2t"]
+[ext_resource type="Script" uid="uid://7erot6xo2xhq" path="res://Scripts/UIScript/image_container.gd" id="2_jkpcs"]
+[ext_resource type="Texture2D" uid="uid://52bltbtormm6" path="res://assets/aseprite/characters.png" id="3_2pi23"]
+[ext_resource type="Texture2D" uid="uid://b1ohpucefps8v" path="res://assets/aseprite/tilemap_new.png" id="4_ma3p3"]
+[ext_resource type="Texture2D" uid="uid://cdih63ti238u4" path="res://assets/Sprites/sprites_market.png" id="5_cfq2p"]
+[ext_resource type="Script" uid="uid://ddnesqe2jq8ji" path="res://Scripts/Components/spawner.gd" id="6_lkvkm"]
+[ext_resource type="PackedScene" uid="uid://bgr5a751j8033" path="res://Scenes/Entities/enemy.tscn" id="7_trqni"]
+[ext_resource type="PackedScene" uid="uid://bd2d512dvfjvb" path="res://Scenes/Entities/npc_agent.tscn" id="8_x7ply"]
+[ext_resource type="PackedScene" uid="uid://bttllmbvomi8j" path="res://Scenes/Entities/king_agent.tscn" id="9_r1fni"]
+[ext_resource type="PackedScene" uid="uid://d1yaaq5gi4l0q" path="res://Scenes/Player.tscn" id="10_1pvox"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fyu2r"]
 font_size = 54
@@ -25,267 +25,267 @@ expand_margin_top = 60.0
 expand_margin_bottom = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s3psu"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(0, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0oc5o"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6kgl"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(0, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ge2ll"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ygq1y"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(32, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx8ge"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ar56"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(64, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hroqg"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ny53q"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(0, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iaxvc"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k0ta7"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(32, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cbtin"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fu0go"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(64, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxuwl"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hm3dl"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(96, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efo56"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(256, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ws1ip"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(128, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m8d4m"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(288, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auxkx"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(96, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ue80s"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(256, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eu4jh"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(128, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5gd"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(288, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cb1je"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(32, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gf8ed"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bu4td"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(96, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sn46o"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(256, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfkvo"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(128, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sa6kt"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(288, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wvg1s"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(96, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rqm36"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(256, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uyn20"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(128, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_002x0"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(288, 128, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8wi6"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(0, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6wfi"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2qef"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(32, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ccoy0"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8b106"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(64, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phclt"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fynpg"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(96, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rdpnq"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(128, 160, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ps0fx"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(96, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lb3sg"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(64, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_doycu"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rhkcd"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(128, 192, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcwdr"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bowh1"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8fs42"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1q27p"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(256, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4rty"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(288, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qv5om"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 256, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofdkc"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 256, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3mmtu"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 256, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cu5tw"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(256, 256, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrqwq"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(0, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7bnp"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_okyvm"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(288, 256, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbdfq"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(32, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3liyb"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8tg0"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(64, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ia7e6"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7wjj"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(0, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_taycj"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(160, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rxsqh"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(32, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bvufy"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(192, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecxa2"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(64, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghm4h"]
-atlas = ExtResource("3_2hbqx")
+atlas = ExtResource("3_2pi23")
 region = Rect2(224, 96, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f58i8"]
@@ -690,7 +690,7 @@ animations = [{
 }]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6hp7l"]
-texture = ExtResource("4_rkj68")
+texture = ExtResource("4_ma3p3")
 texture_region_size = Vector2i(34, 34)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -884,7 +884,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-854, -2834, 97, -2839,
 agent_radius = 16.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2hbqx"]
-texture = ExtResource("5_xh17d")
+texture = ExtResource("5_cfq2p")
 0:0/size_in_atlas = Vector2i(4, 2)
 0:0/0 = 0
 0:0/0/z_index = 6
@@ -914,8 +914,9 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_2hbqx")
 
-[node name="BlueprintLevel" type="Node2D" unique_id=1168723390]
-script = ExtResource("1_d6u6w")
+[node name="1RoyalWalk" type="Node2D" unique_id=1168723390]
+script = ExtResource("1_2ke2t")
+level_name = "RoyalWalk"
 
 [node name="WantedSign" type="CanvasLayer" parent="." unique_id=19946677]
 unique_name_in_owner = true
@@ -964,7 +965,7 @@ grow_vertical = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(9.715, 0)
 alignment = 1
-script = ExtResource("2_xh17d")
+script = ExtResource("2_jkpcs")
 
 [node name="Image" type="PanelContainer" parent="WantedSign/ImageContainer" unique_id=453090780]
 custom_minimum_size = Vector2(74.995, 14.63)
@@ -1012,24 +1013,30 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_fyu2r")
 
 [node name="Spawner" type="Node2D" parent="." unique_id=926577577 node_paths=PackedStringArray("entities_container", "waypoint_container", "king")]
-script = ExtResource("5_s1m8f")
-enemy_scene = ExtResource("6_nhcin")
-npc_scene = ExtResource("7_8nc3b")
+script = ExtResource("6_lkvkm")
+enemy_scene = ExtResource("7_trqni")
+npc_scene = ExtResource("8_x7ply")
 entities_container = NodePath("../Entities/EntitiesContainer")
 waypoint_container = NodePath("../WaypointsNPCs")
 num_of_enemies = 1
-num_of_npcs = 20
+num_of_npcs = 25
 king = NodePath("../Entities/EntitiesContainer/king_agent")
 
 [node name="Entities" type="Node2D" parent="." unique_id=208438064]
 
 [node name="EntitiesContainer" type="NavigationRegion2D" parent="Entities" unique_id=15568332]
+y_sort_enabled = true
 navigation_polygon = SubResource("NavigationPolygon_ulfyr")
 
-[node name="king_agent" parent="Entities/EntitiesContainer" unique_id=1024896108 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("8_35tj7")]
+[node name="RandomStuff" type="TileMapLayer" parent="Entities/EntitiesContainer" unique_id=1541175053]
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAANAPX/AAAIAAAAAAD6/wQAAAANAAAAADD//wQAAAANAAAAADD3/wIAAAAIAAAAAGD3/wAAAAAIAAAAAGD3//z/AAAaAAAAAFD3//n/AAAaAAAAAFD3//b/AAAaAAAAAFDx//j/AAAGAAAAAAD0//3/AAAGAAAAAAASAPv/AAAGAAAAAADw/wQAAAAGAAAAAAD2/wYAAAAGAAAAAAAIAAsAAAAGAAAAAAANAAUAAAAGAAAAAADy/wYAAAAVAAEAAAD5/woAAAAVAAEAAADx//3/AAAVAAEAAADr//f/AAAVAAEAAAD1//H/AAAVAAEAAAAOAPn/AAAVAAEAAAARAO//AAAVAAEAAAAHAOv/AAAVAAEAAAACAOr/AAAVAAEAAAD0/+v/AAAVAAEAAADv/+//AAAVAAEAAAAEAP3/AAAXAAEAAADt//v/AAAXAAEAAAAQAAEAAAAXAAEAAAARAAYAAAAIAAAAAADr/wQAAAAIAAAAAAAIAAMAAAAIAAAAAAALAAMAAAAIAAAAAAAKAAMAAAAIAAAAAAAJAAMAAAAIAAAAAADz/wUAAAAEAAEAAAD0/wIAAAAEAAEAAAD+/wYAAAAEAAEAAAAOAAIAAAAEAAEAAAD1//j/AAAEAAEAAADz//H/AAAEAAEAAAAGAOn/AAAEAAEAAAAOAOr/AAAEAAEAAADt/+j/AAAEAAEAAAD0/+3/AAAEAAEAAAAHAPL/AAAEAAEAAAAIAPL/AAAEAAEAAAAXAPL/AAAEAAEAAAAUAPr/AAAEAAEAAAAJAOT/AAAEAAEAAAATAOP/AAAEAAEAAAD///f/AAALAAAAAAAMAP//AAANAAAAAFANAPn/AAANAAAAAFD3//H/AAANAAAAAGACAO3/AAANAAAAAAAHAO3/AAANAAAAAAD3/+j/AAANAAAAAGD+/+n/AAANAAAAAFD6/+D/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ulfyr")
+
+[node name="king_agent" parent="Entities/EntitiesContainer" unique_id=1024896108 node_paths=PackedStringArray("waypoint_container") instance=ExtResource("9_r1fni")]
 waypoint_container = NodePath("../../../KingsPath")
 
-[node name="Player" parent="Entities/EntitiesContainer" unique_id=1244140961 instance=ExtResource("9_226rs")]
+[node name="Player" parent="Entities/EntitiesContainer" unique_id=1244140961 instance=ExtResource("10_1pvox")]
 
 [node name="Camera2D" type="Camera2D" parent="Entities/EntitiesContainer/Player" unique_id=1903406272]
 y_sort_enabled = true
@@ -1040,37 +1047,32 @@ limit_right = 2137
 limit_bottom = 1203
 limit_smoothed = true
 
-[node name="RandomStuff" type="TileMapLayer" parent="Entities/EntitiesContainer" unique_id=1541175053]
-scale = Vector2(5, 5)
-tile_map_data = PackedByteArray("AAANAPX/AAAIAAAAAAD6/wQAAAANAAAAADD//wQAAAANAAAAADD3/wIAAAAIAAAAAGD3/wAAAAAIAAAAAGD3//z/AAAaAAAAAFD3//n/AAAaAAAAAFD3//b/AAAaAAAAAFDx//j/AAAGAAAAAAD0//3/AAAGAAAAAAASAPv/AAAGAAAAAADw/wQAAAAGAAAAAAD2/wYAAAAGAAAAAAAIAAsAAAAGAAAAAAANAAUAAAAGAAAAAADy/wYAAAAVAAEAAAD5/woAAAAVAAEAAADx//3/AAAVAAEAAADr//f/AAAVAAEAAAD1//H/AAAVAAEAAAAOAPn/AAAVAAEAAAARAO//AAAVAAEAAAAHAOv/AAAVAAEAAAACAOr/AAAVAAEAAAD0/+v/AAAVAAEAAADv/+//AAAVAAEAAAAEAP3/AAAXAAEAAADt//v/AAAXAAEAAAAQAAEAAAAXAAEAAAARAAYAAAAIAAAAAADr/wQAAAAIAAAAAAAIAAMAAAAIAAAAAAALAAMAAAAIAAAAAAAKAAMAAAAIAAAAAAAJAAMAAAAIAAAAAADz/wUAAAAEAAEAAAD0/wIAAAAEAAEAAAD+/wYAAAAEAAEAAAAOAAIAAAAEAAEAAAD1//j/AAAEAAEAAADz//H/AAAEAAEAAAAGAOn/AAAEAAEAAAAOAOr/AAAEAAEAAADt/+j/AAAEAAEAAAD0/+3/AAAEAAEAAAAHAPL/AAAEAAEAAAAIAPL/AAAEAAEAAAAXAPL/AAAEAAEAAAAUAPr/AAAEAAEAAAAJAOT/AAAEAAEAAAATAOP/AAAEAAEAAAD///f/AAALAAAAAAAMAP//AAANAAAAAFANAPn/AAANAAAAAFD3//H/AAANAAAAAGACAO3/AAANAAAAAAAHAO3/AAANAAAAAAD3/+j/AAANAAAAAGD+/+n/AAANAAAAAFD6/+D/AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_ulfyr")
-
 [node name="WaypointsNPCs" type="Node2D" parent="." unique_id=2134671676]
 
-[node name="KingsPath" type="Node2D" parent="." unique_id=2023405898]
+[node name="KingsPath" type="Node2D" parent="." unique_id=1068008048]
 position = Vector2(57.999985, -308.0002)
 scale = Vector2(2.26, 2.26)
 
-[node name="Waypoint1" type="Marker2D" parent="KingsPath" unique_id=1345572278]
+[node name="Waypoint1" type="Marker2D" parent="KingsPath" unique_id=1038475046]
 position = Vector2(111.50444, 177.43373)
 
-[node name="Waypoint2" type="Marker2D" parent="KingsPath" unique_id=685939603]
+[node name="Waypoint2" type="Marker2D" parent="KingsPath" unique_id=1710938594]
 position = Vector2(-73.00884, 251.77002)
 
-[node name="Waypoint3" type="Marker2D" parent="KingsPath" unique_id=122041430]
+[node name="Waypoint3" type="Marker2D" parent="KingsPath" unique_id=1792107890]
 position = Vector2(-282.74338, 16.814247)
 
-[node name="Waypoint4" type="Marker2D" parent="KingsPath" unique_id=1019428009]
+[node name="Waypoint4" type="Marker2D" parent="KingsPath" unique_id=751520184]
 position = Vector2(-284.95575, -191.15036)
 
-[node name="Waypoint5" type="Marker2D" parent="KingsPath" unique_id=127776805]
+[node name="Waypoint5" type="Marker2D" parent="KingsPath" unique_id=1721776216]
 position = Vector2(-269.9115, -376.54858)
 
-[node name="Waypoint6" type="Marker2D" parent="KingsPath" unique_id=267630650]
+[node name="Waypoint6" type="Marker2D" parent="KingsPath" unique_id=880257097]
 position = Vector2(45.57524, -462.8318)
 
-[node name="Waypoint7" type="Marker2D" parent="KingsPath" unique_id=1467666295]
+[node name="Waypoint7" type="Marker2D" parent="KingsPath" unique_id=200491246]
 position = Vector2(-275.22125, -688.9379)
 
-[node name="Waypoint8" type="Marker2D" parent="KingsPath" unique_id=375286002]
+[node name="Waypoint8" type="Marker2D" parent="KingsPath" unique_id=1929570050]
 position = Vector2(-224.77876, -932.7433)

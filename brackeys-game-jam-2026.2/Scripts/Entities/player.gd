@@ -8,6 +8,7 @@ const SPEED = 300.0
 @onready var animated_sprite: AnimatedSprite2D = $"AnimatedSprite2D"
 @onready var attack_stream_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var damage_component: Area2D = $Damage_component
+@onready var movement_particles_component: Node2D = %MovementParticlesComponent
 
 
 @onready var schritte_player: AudioStreamPlayer = $Schritte
@@ -98,9 +99,10 @@ func play_sound():
 	
 	if is_moving && schritte_player.playing == false:
 
-			
+		movement_particles_component.start_particles()
 		play_schritte()
 	elif !is_moving && schritte_player.playing == true:
+		movement_particles_component.stop_particles()
 		schritte_player.stop()
 #-----------------------------------------------------------------------------------
 #  ATTACKING

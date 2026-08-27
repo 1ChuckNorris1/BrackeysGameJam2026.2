@@ -2,7 +2,7 @@ extends Node
 
 const LOOSE_SCREEN = preload("uid://c53rl3w41neas")
 const VICTORY_SCREEN = preload("uid://cfys1q7wjueic")
-
+const PLAYTHROUGH_SCREEN = preload("res://Scenes/Menu_UI/beatGameScreen.tscn")
 var shake_strength: float = 0.0
 var shake_decay: float = 15.0
 
@@ -29,6 +29,9 @@ func loose_game():
 	
 
 func win_game(level_name: String):
-	Global.win_level(level_name)
+	if Global.win_level(level_name):
+		Global.reset_costumes()
+		get_tree().change_scene_to_packed(PLAYTHROUGH_SCREEN)
+		return
 	Global.reset_costumes()
 	get_tree().change_scene_to_packed(VICTORY_SCREEN)

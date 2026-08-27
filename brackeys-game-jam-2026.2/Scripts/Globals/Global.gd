@@ -5,9 +5,9 @@ var free_costumes: Array[int]
 var enemy_costumes: Array[int]
 var all_costumes: Array[int]
 
-var all_levels: Array[String] = ["Castle1", "Castle2","Castle3", "Market1", "Market2", "Market3"]
+var all_levels: Array[String] = ["RoyalWalk", "MarketDay","Festival", "Market1", "Market2", "Market3"]
 var cleared_levels: Array[String] = []
-var unlocked_levels: Array[String] = ["Castle1"]
+var unlocked_levels: Array[String] = ["RoyalWalk"]
 const SAVE_PATH = "user://savegame.cfg"
 
 var statistics: Dictionary = {
@@ -89,7 +89,7 @@ func reset_costumes():
 func reset():
 	reset_costumes()
 	cleared_levels.clear()
-	unlocked_levels = ["Castle1"]
+	unlocked_levels = ["RoyalWalk"]
 	save_game()
 	
 func save_game() -> void:
@@ -108,17 +108,30 @@ func load_game() -> void:
 		print("Kein Spielstand gefunden, starte neues Spiel.")
 		return
 	cleared_levels = config.get_value("Progression", "cleared_levels", [])
-	unlocked_levels = config.get_value("Progression", "unlocked_levels", ["Level1"])
+	unlocked_levels = config.get_value("Progression", "unlocked_levels", ["RoyalWalk"])
 	statistics = config.get_value("Stats", "statistics", statistics)
 	print("Spielstand erfolgreich geladen!")
 
-func win_level(level:String):
+func win_level(level: String) -> bool:
 	if not cleared_levels.has(level):
 		cleared_levels.append(level)
-	var next_level_index = all_levels.find(level) + 1
+		
+	var current_index = all_levels.find(level)
+	
+	if current_index == -1:
+		push_error("Level '" + level + "' wurde nicht in all_levels gefunden!")
+		save_game()
+		return false
+		
+	var next_level_index = current_index + 1
 	if next_level_index < all_levels.size():
 		var next_level_name = all_levels[next_level_index]
 		if not unlocked_levels.has(next_level_name):
 			unlocked_levels.append(next_level_name)
+	else:
+		save_game()
+		return true # Letztes Level geschafft
+	
 	save_game()
+	return false
 		

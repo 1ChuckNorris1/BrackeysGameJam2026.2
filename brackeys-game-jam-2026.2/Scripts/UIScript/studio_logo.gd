@@ -5,6 +5,7 @@ extends CanvasLayer
 @export_file("*.tscn") var main_menu: String
 
 func _ready() -> void:
+	SoundeffectsManager.play_sound(SoundeffectsManager.game_start_sound)
 	MenuMusic.stop()
 	animation_player.play("open")
 

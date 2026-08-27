@@ -8,9 +8,9 @@ const REBINDABLE_ACTIONS = ["move_up", "move_right", "move_down", "move_left", "
 var settings = {
 	"fullscreen": false,
 	"resolution": Vector2i(1920, 1080),
-	"master_volume": 1.0,
-	"music_volume": 1.0,
-	"sfx_volume": 1.0,
+	"master_volume": 0.6,
+	"music_volume": 0.6,
+	"sfx_volume": 0.6,
 	"keybindings": {}
 }
 

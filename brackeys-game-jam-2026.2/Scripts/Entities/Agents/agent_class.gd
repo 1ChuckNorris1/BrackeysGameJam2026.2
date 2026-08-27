@@ -22,7 +22,7 @@ var wackel_time: float = 0.0
 var is_waiting: bool = false
 @export var wait_chance: float = 0.5    
 @export var max_wait_time: float = 3.0 
-
+@export var waypoint_radius: float = 75.0
 
 var waypoints: Array[Node]
 var waypoint_index = 0
@@ -30,7 +30,11 @@ var now_waypoint: Node2D
 
 var is_chasing: bool = false
 
+var last_position: Vector2 = Vector2.ZERO
+var stuck_timer: float = 0.0
+
 func _ready():
+	nav_agent.target_desired_distance = waypoint_radius
 	movement_particles.tile_map_layers = tile_map_layers
 	speed = base_speed
 	for waypoint in waypoint_container.get_children():
@@ -48,7 +52,9 @@ func prepare():
 	pass
 
 func _physics_process(delta: float) -> void:
-	if is_chasing: is_waiting = false
+	if is_chasing: 
+		is_waiting = false
+		
 	if is_waiting: 
 		movement_particles.stop_particles()
 		nav_agent.velocity = Vector2.ZERO
@@ -59,13 +65,32 @@ func _physics_process(delta: float) -> void:
 	else:
 		movement_particles.start_particles()
 
+
+	if nav_agent.is_navigation_finished():
+		return
+
 	var next_path_pos = nav_agent.get_next_path_position()
 	var direction = global_position.direction_to(next_path_pos)
-	var new_velocity = direction * speed 
+	var target_velocity = direction * speed 
 	
-	nav_agent.velocity = new_velocity
+
+	if nav_agent.avoidance_enabled:
+		nav_agent.velocity = target_velocity
+	else:
+		_on_navigation_agent_2d_velocity_computed(target_velocity)
+		
 	abilities()
 	handle_wackeln(delta)
+	
+	if not is_waiting and velocity.length() > 5.0:
+		if global_position.distance_to(last_position) < 2.0:
+			stuck_timer += delta
+			if stuck_timer > 2.0: 
+				stuck_timer = 0.0
+				_on_nav_finished()
+		else:
+			stuck_timer = 0.0
+			last_position = global_position
 	
 func _process(_delta: float) -> void:
 	var speed_randomizer = randf_range(0,3000)

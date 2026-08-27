@@ -18,6 +18,7 @@ extends Node2D
 var used_spawn_points: Array[Vector2]
 
 func _ready() -> void:
+	await get_tree().physics_frame
 	await NavigationServer2D.map_changed
 	for child in waypoint_container.get_children():
 		child.free()
@@ -50,17 +51,39 @@ func _ready() -> void:
 			push_error("npc Scene is missing in spawner")
 	
 
-		
 
-	
 
-			
-func generate_position(away_from_king: bool = true):
+func generate_position(away_from_king: bool = true) -> Vector2:
 	var region_rid = entities_container.get_region_rid()
-	var spawn_pos = NavigationServer2D.region_get_random_point(region_rid,1,true)
 	var king_pos = king.global_position if king else Vector2.ZERO
-	if away_from_king:
-		while spawn_pos.distance_to(king_pos) < 500:
-			spawn_pos = NavigationServer2D.region_get_random_point(region_rid, 1 ,true)
 	
-	return spawn_pos
+	var max_attempts = 200
+	
+	for attempt in range(max_attempts):
+		var spawn_pos = NavigationServer2D.region_get_random_point(region_rid, 1, true)
+		
+		if away_from_king and spawn_pos.distance_to(king_pos) < 500:
+			continue
+			
+		if is_point_in_obstacle(spawn_pos):
+			continue
+			
+		return spawn_pos
+		
+	push_warning("Keine freie Spawnposition nach mehreren Versuchen gefunden!")
+	return Vector2.ZERO
+
+
+func is_point_in_obstacle(pos: Vector2, radius: float = 20.0) -> bool:
+	var space_state = get_world_2d().direct_space_state
+	
+	var shape_query = PhysicsShapeQueryParameters2D.new()
+	var circle = CircleShape2D.new()
+	circle.radius = radius
+	
+	shape_query.shape = circle
+	shape_query.transform = Transform2D(0.0, pos)
+	shape_query.collision_mask = 1 
+	
+	var result = space_state.intersect_shape(shape_query)
+	return result.size() > 0

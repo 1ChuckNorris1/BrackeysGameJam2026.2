@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://db5cdr434544v"]
 
 [ext_resource type="Script" uid="uid://pa0pmy7ak2tn" path="res://Scripts/UIScript/settings_menu.gd" id="1_od2ni"]
+[ext_resource type="Script" uid="uid://bwuu6djhvkyne" path="res://Scripts/UIScript/slider_class.gd" id="2_v4cfq"]
 [ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_w64k6"]
 [ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="3_w64k6"]
 
@@ -1267,6 +1268,7 @@ layout_mode = 2
 max_value = 1.0
 step = 0.1
 value = 1.0
+script = ExtResource("2_v4cfq")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/TabContainer/SoundContainer" unique_id=32440877]
 modulate = Color(1, 1, 1, 0)
@@ -1289,6 +1291,7 @@ layout_mode = 2
 max_value = 1.0
 step = 0.1
 value = 1.0
+script = ExtResource("2_v4cfq")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/TabContainer/SoundContainer" unique_id=498275322]
 modulate = Color(1, 1, 1, 0)
@@ -1311,6 +1314,7 @@ layout_mode = 2
 max_value = 1.0
 step = 0.1
 value = 1.0
+script = ExtResource("2_v4cfq")
 
 [node name="WindowContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer" unique_id=83659383]
 visible = false

@@ -746,7 +746,10 @@ script = ExtResource("1_o6kgl")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true
-max_speed = 1000.0
+radius = 16.0
+neighbor_distance = 150.0
+max_neighbors = 8
+avoidance_priority = 0.8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
 position = Vector2(0.5, 3)

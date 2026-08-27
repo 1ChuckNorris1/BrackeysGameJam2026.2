@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://diuf03rls48ua" path="res://Scripts/Globals/soundeffects_manager.gd" id="1_hn0bg"]
 
 [node name="SoundeffectsManager" type="AudioStreamPlayer" unique_id=1664550613]
+bus = &"SFX"
 script = ExtResource("1_hn0bg")

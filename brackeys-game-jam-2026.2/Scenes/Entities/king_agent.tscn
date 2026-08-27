@@ -6,10 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ximwursx10rv" path="res://Scenes/Components/movement_particles_component.tscn" id="4_ne00k"]
 [ext_resource type="AudioStream" uid="uid://cutcgjn6hanid" path="res://assets/Sounds/SFX/deathkoenig.wav" id="5_df8lv"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
-radius = 12.0
-height = 26.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wmsum"]
 atlas = ExtResource("2_plaf6")
 region = Rect2(160, 352, 32, 32)
@@ -100,6 +96,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ulfyr"]
+radius = 11.0
+height = 24.0
+
 [node name="king_agent" type="CharacterBody2D" unique_id=1024896108 groups=["Damageable", "King"]]
 position = Vector2(0, -32)
 scale = Vector2(2, 2)
@@ -110,11 +110,9 @@ base_speed = 125.0
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
-position = Vector2(-0.5, 4.5)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_ulfyr")
+radius = 16.0
+neighbor_distance = 150.0
+max_neighbors = 8
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=164618458 groups=["Damageable"]]
 z_index = 5
@@ -125,9 +123,14 @@ animation = &"die"
 
 [node name="MovementParticlesComponent" parent="." unique_id=2100393624 instance=ExtResource("4_ne00k")]
 unique_name_in_owner = true
+visible = false
 
 [node name="DieSound" type="AudioStreamPlayer" parent="." unique_id=1766507394]
 stream = ExtResource("5_df8lv")
 bus = &"SFX"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("CapsuleShape2D_ulfyr")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

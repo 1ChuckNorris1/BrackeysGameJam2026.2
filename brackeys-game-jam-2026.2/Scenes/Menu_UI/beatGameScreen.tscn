@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://cfys1q7wjueic"]
+[gd_scene format=3 uid="uid://dokpfv12r6bt"]
 
-[ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_mnqso"]
-[ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="1_ovn80"]
-[ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="3_mnqso"]
+[ext_resource type="Texture2D" uid="uid://fp2oqmc8epfa" path="res://assets/Menu/title_screen.png" id="1_ss8uu"]
+[ext_resource type="Script" uid="uid://40n2at4jig64" path="res://Scripts/UIScript/button_class.gd" id="2_emiqb"]
+[ext_resource type="Script" uid="uid://cmm70dmcx5c82" path="res://Scripts/UIScript/game_beaten_label.gd" id="2_repma"]
+[ext_resource type="Script" uid="uid://6jkakdul7ujh" path="res://Scripts/UIScript/animation_player_ui.gd" id="3_repma"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dm25u"]
 font_size = 70
@@ -261,7 +262,7 @@ offset_bottom = 46.535004
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_scale = Vector2(1.915, 1.915)
-texture = ExtResource("1_mnqso")
+texture = ExtResource("1_ss8uu")
 expand_mode = 3
 stretch_mode = 4
 
@@ -284,15 +285,16 @@ theme_override_constants/separation = 24
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1530254722]
 modulate = Color(0.427493, 0.42749307, 0.42749307, 1)
 layout_mode = 2
-text = "You made it!!!"
+text = "I can't believe it:"
 label_settings = SubResource("LabelSettings_dm25u")
 
 [node name="Label2" type="Label" parent="VBoxContainer" unique_id=1370973981]
 modulate = Color(0.427493, 0.42749307, 0.42749307, 1)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "The king reached the castle unharmed"
+text = "After 100 Royal Deaths you actually made it!"
 label_settings = SubResource("LabelSettings_dr4oc")
+script = ExtResource("2_repma")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2145659667]
 modulate = Color(0.427493, 0.42749307, 0.42749307, 1)
@@ -317,7 +319,7 @@ modulate = Color(0.427493, 0.42749307, 0.42749307, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Levels"
-script = ExtResource("1_ovn80")
+script = ExtResource("2_emiqb")
 scene_path = "uid://cs4ncfj4lpa1o"
 
 [node name="MainMenu_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1588130099]
@@ -325,9 +327,9 @@ modulate = Color(0.427493, 0.42749307, 0.42749307, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Main Menu"
-script = ExtResource("1_ovn80")
+script = ExtResource("2_emiqb")
 scene_path = "uid://5luhos24eh2i"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=302875620]
 libraries/ = SubResource("AnimationLibrary_r1g0m")
-script = ExtResource("3_mnqso")
+script = ExtResource("3_repma")

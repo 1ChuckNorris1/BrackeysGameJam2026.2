@@ -739,6 +739,9 @@ script = ExtResource("1_s3psu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1533056958]
 avoidance_enabled = true
+radius = 16.0
+neighbor_distance = 150.0
+avoidance_priority = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005291554]
 position = Vector2(0, 3)
